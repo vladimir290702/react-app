@@ -1,0 +1,55 @@
+header {
+    padding: 1rem;
+    background-color: #221F1F;
+}
+
+.navbar {
+    text-align: right;
+}
+
+.navbar ul li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.nav-link {
+    color: #E50914;
+    text-decoration: none;
+    float: right;
+    font-size: 28px;
+    transition-duration: 0.4s;
+}
+
+.nav-link:hover {
+    transform: scale(1.1);
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    right: 0;
+    background: #E50914;
+    transition: width .2s ease;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+    left: 0;
+    background: #E50914;
+}
+
+.title {
+    font-size: 2.1rem;
+    float: left;
+    color: #E50914;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    transition-duration: 0.4s;
+}
+
+.title:hover {
+    transform: scale(1.1);
+}
