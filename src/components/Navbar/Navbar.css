@@ -1,11 +1,12 @@
 header {
-    padding: 1rem;
+    padding: 0.1rem;
     background-color: #221F1F;
 }
 
 .navbar {
     text-align: right;
     padding-right: 1rem;
+    padding-top: 5px;
 }
 
 .navbar ul li {
@@ -13,16 +14,17 @@ header {
     padding: 0 10px;
 }
 
+
 .nav-link {
     color: #E50914;
     text-decoration: none;
     float: right;
-    font-size: 28px;
+    font-size: 24px;
     transition-duration: 0.4s;
 }
 
 .nav-link:hover {
-    transform: scale(1.1);
+    transform: scale(1);
 }
 
 .nav-link:after {
