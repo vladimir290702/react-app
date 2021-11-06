@@ -5,6 +5,7 @@ header {
 
 .navbar {
     text-align: right;
+    padding-right: 1rem;
 }
 
 .navbar ul li {

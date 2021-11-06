@@ -1,22 +1,13 @@
 import './Navbar.css';
+import GuestUser from './GuestUser';
+import LoggedUser from './LoggedUser';
 
 function Navbar() {
-    return (
-        <header>
-            <a className="title" href="#home">METFLIX</a>
+    if (1 == 1) {
+        return <LoggedUser />
+    }
 
-            <nav class="navbar">
-                <ul>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#login">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#register">Register</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    );
+    return <GuestUser />
 }
 
 export default Navbar;
