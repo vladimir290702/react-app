@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
+import Footer from "./components/Footer/Footer";
 import './App.css';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Register />
+      <Footer/>
     </div>
   );
 }

@@ -71,10 +71,6 @@
     transition: 0.4s;
 }
 
-.login-btn:hover {
-    font-size: 1.1rem;
-    padding: 15px
-}
 
 ::-moz-placeholder {
     font-size: 0.7rem;
