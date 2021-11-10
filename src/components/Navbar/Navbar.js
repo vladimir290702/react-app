@@ -3,7 +3,8 @@ import GuestUser from './GuestUser';
 import LoggedUser from './LoggedUser';
 
 function Navbar() {
-    if (1 == 1) {
+    let user = JSON.parse(localStorage.getItem('auth'))?.email;
+    if (user) {
         return <LoggedUser />
     }
 
