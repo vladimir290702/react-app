@@ -6,10 +6,10 @@ function GuestUser() {
             <nav className="navbar">
                 <ul>
                     <li className="nav-item">
-                        <a className="nav-link" href="#login">Login</a>
+                        <a className="nav-link" href="/login">Login</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#register">Register</a>
+                        <a className="nav-link" href="/register">Register</a>
                     </li>
                 </ul>
             </nav>

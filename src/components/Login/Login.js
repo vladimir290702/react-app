@@ -12,7 +12,7 @@ function Login() {
             const user = await signInWithEmailAndPassword(
                 auth, loginEmail, loginPassoword
             );
-            return localStorage.setItem('auth', JSON.stringify(user));
+            return localStorage.setItem('auth', JSON.stringify(user.user));
         } catch (error) {
             console.log(error.message);
         }
