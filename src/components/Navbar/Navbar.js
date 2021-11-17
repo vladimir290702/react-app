@@ -4,10 +4,6 @@ import LoggedUser from './LoggedUser';
 
 function Navbar() {
    
-    if (true) {
-        return <LoggedUser />
-    }
-
     return <GuestUser />
 }
 

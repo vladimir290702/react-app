@@ -1,15 +1,17 @@
+import { Link } from 'react-router-dom';
+
 function GuestUser() {
     return (
         <header>
-            <a className="title" href="#home">METFLIX</a>
+            <Link className="title" to="/home">METFLIX</Link>
 
             <nav className="navbar">
                 <ul>
                     <li className="nav-item">
-                        <a className="nav-link" href="/login">Login</a>
+                        <Link className="nav-link" to="/login">Login</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/register">Register</a>
+                        <Link className="nav-link" to="/register">Register</Link>
                     </li>
                 </ul>
             </nav>
