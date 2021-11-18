@@ -1,8 +1,8 @@
-
+import './MovieCard.css';
 import { useState, useEffect } from "react";
 const base_url = "https://image.tmdb.org/t/p/original";
 
-function MovieCard({ title, endpoint }) {
+function MovieCard({ title, endpoint, isLarge }) {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
@@ -12,7 +12,6 @@ function MovieCard({ title, endpoint }) {
             setMovies(data.results);
             return data;
         }
-
         fetchData();
     }, [])
 
@@ -20,8 +19,16 @@ function MovieCard({ title, endpoint }) {
         <div className="row">
             <h1>{title}</h1>
 
-
-        </div> 
+            <div className="row_posters">
+                {movies.map(movie => (
+                    <img 
+                    key={movie.id}
+                    className={`row_poster ${isLarge && 'row_posterLarge'}`}
+                    src={`${base_url}${isLarge ? movie.poster_path : movie.backdrop_path}`} 
+                    alt={movie.name} />
+                ))}
+            </div>
+        </div>
     )
 }
 

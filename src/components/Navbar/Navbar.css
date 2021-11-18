@@ -1,6 +1,7 @@
 header {
     padding: 0.1rem;
     background-color: #221F1F;
+    color: #221F1F;
 }
 
 .navbar {
@@ -13,7 +14,6 @@ header {
     display: inline-block;
     padding: 0 10px;
 }
-
 
 .nav-link {
     color: #E50914;

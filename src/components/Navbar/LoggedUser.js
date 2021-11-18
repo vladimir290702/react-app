@@ -4,15 +4,15 @@ function LoggedUser() {
 
     return (
         <header>
-            <Link className="title" href="/home">METFLIX</Link>
+            <Link className="title" to="/home">METFLIX</Link>
 
             <nav className="navbar">
                 <ul>
                     <li className="nav-item">
-                        <Link className="nav-link" href="/profile">Welcome, ###</Link>
+                        <Link className="nav-link" to="/profile">Welcome, ###</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" href="/logout">Logout</Link>
+                        <Link className="nav-link" to="/logout">Logout</Link>
                     </li>
                 </ul>
             </nav>
