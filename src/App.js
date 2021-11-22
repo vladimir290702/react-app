@@ -1,24 +1,29 @@
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import AllMovies from "./components/AllMovies/AllMovies";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
+import Banner from './components/Banner/Banner'
+import AuthContextProvider from './contexts/authContext';
 
 function App() {
+
   return (
-    <>
+    <AuthContextProvider>
       <Navbar />
+
       <div className="App">
-        <Switch>
-          <Route path='/home' component={AllMovies} />
-          <Route path="/login" component={Login} />
-          <Route path='/register' component={Register} />
-        </Switch>
+        <Routes>
+          <Route path='/home' element={<Banner />} />
+          <Route path='/all' element={<AllMovies />} />
+          <Route path="/login" element={<Login />} />
+          <Route path='/register' element={<Register />} />
+        </Routes>
       </div>
       <Footer />
-    </>
+    </AuthContextProvider>
   );
 }
 
