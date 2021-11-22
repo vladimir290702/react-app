@@ -5,7 +5,8 @@ import Footer from "./components/Footer/Footer";
 import AllMovies from "./components/AllMovies/AllMovies";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
-import Banner from './components/Banner/Banner'
+import Banner from './components/Banner/Banner';
+import ButtonSection from './components/CreateMovieButton/ButtonSection';
 import AuthContextProvider from './contexts/authContext';
 
 function App() {
@@ -20,8 +21,10 @@ function App() {
           <Route path='/all' element={<AllMovies />} />
           <Route path="/login" element={<Login />} />
           <Route path='/register' element={<Register />} />
+
         </Routes>
       </div>
+      <ButtonSection />
       <Footer />
     </AuthContextProvider>
   );
