@@ -1,0 +1,69 @@
+.add_movie_wrapper {
+    color: white;
+}
+
+.add_movie_form {
+    display: flex;
+    background: #221F1F;
+    border-radius: 15px;
+    margin: 20px 200px;
+    padding: 55px 130px;
+}
+
+.add_movie_form h1 {
+    font-size: 26px;
+    margin-bottom: -5px;
+}
+
+.form_title {
+    text-align: center;
+    font-size: 45px;
+    margin-top: 30px;
+    margin-bottom: -90px;
+}
+
+.left_movie_section {
+    float: left;
+    padding-right: 50px;
+}
+
+.right_movie_section {
+    float: right;
+}
+
+.form-control {
+    width: 400px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.form-control_special {
+    height: 137px;
+    width: 400px;
+    border-radius: 8px;
+}
+
+.form-control::-webkit-input-placeholder{
+    font-size: 16px;
+}
+
+.form-control_special::-webkit-input-placeholder{
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn_submit {
+    font-size: 22px;
+    color: white;
+    background-color: #e50914;
+    border-radius: 6px;
+    height: 60px;
+    width: 200px;
+    margin-top: 420px;
+    margin-left: -540px;
+    transition: 0.4s;
+}
+
+.btn_submit:hover {
+    font-size: 26px;
+}

@@ -14,12 +14,12 @@ function Login() {
         e.preventDefault();
 
         if (!email || !password) {
-            return navigate('/home');
+            return navigate('/login');
         }
 
         login(email, password)
             .then(res => {
-                navigate('/home');
+                navigate('/');
             })
             .catch(err => console.log(err.message))
     }

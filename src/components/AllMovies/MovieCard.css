@@ -1,10 +1,16 @@
 .all_movies{
+   margin-top: -20px;
    background-color: #221F1F;
    color: white;
 }
 
+.movie_title{
+   padding-top: 30px;
+}
+
 .row{
    margin-left: 20px;
+   margin-bottom: -50px;
 }
 
 .row > h1{
@@ -46,5 +52,5 @@
    width: 100%;
    background-color: #E50914;
    height: 4px;
-   margin: 20px 0 0 0;
+   margin: 50px 0 0 0;
 }

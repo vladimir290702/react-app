@@ -31,7 +31,7 @@ function Navbar() {
             <li className="nav-item">
                 <Link className="nav-link" to="/logout" onClick={async e => {
                     e.preventDefault();
-                    navigate('/home')
+                    navigate('/')
 
                     logout();
                 }}>Logout</Link>
@@ -41,7 +41,7 @@ function Navbar() {
 
     return (
         <header>
-            <Link className="title" to="/home">METFLIX</Link>
+            <Link className="title" to="/">METFLIX</Link>
 
             <nav className="navbar">
                 {currentUser ? userNavigation : guestNavigation}

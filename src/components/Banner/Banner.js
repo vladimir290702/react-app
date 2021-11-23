@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import requests from '../../services/tmdbRequest';
-import './Banner.css'
+import './Banner.css';
+import ButtonSection from '../ButtonSection/ButtonSection';
 
 function Banner() {
     const [movie, setMovie] = useState([]);
@@ -19,22 +20,26 @@ function Banner() {
     }, [])
 
     return (
-        <div className="banner"
-            style={
-                {
-                    backgroundSize: "cover",
-                    backgroundImage: `url(
+
+        <>
+            <div className="banner"
+                style={
+                    {
+                        backgroundSize: "cover",
+                        backgroundImage: `url(
                     "https://image.tmdb.org/t/p/original/${movie?.backdrop_path}"
                 )` ,
-                    backgroundPosition: "center center",
-                }
-            }>
-            <div className="banner_contents">
-                <h1 className="banner_title">{movie?.title || movie?.name || movie?.original_name}</h1>
+                        backgroundPosition: "center center",
+                    }
+                }>
+                <div className="banner_contents">
+                    <h1 className="banner_title">{movie?.title || movie?.name || movie?.original_name}</h1>
 
-                <h1 className='banner_description'>{movie?.overview}</h1>
+                    <h1 className='banner_description'>{movie?.overview}</h1>
+                </div>
             </div>
-        </div>
+            <ButtonSection />
+        </>
     )
 }
 

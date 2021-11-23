@@ -16,11 +16,11 @@ function Register() {
         e.preventDefault();
 
         if (password !== repeatPassword) {
-            return;
+            return navigate('/register');
         }
 
         register(email, password)
-            .then(res => navigate('/home'))
+            .then(res => navigate('/'))
             .catch(err => console.log(err.message))
     }
 

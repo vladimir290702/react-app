@@ -17,7 +17,7 @@ function MovieCard({ title, endpoint, isLarge }) {
 
     return (
         <div className="row">
-            <h1>{title}</h1>
+            <h1 className='movie_title'>{title}</h1>
 
             <div className="row_posters">
                 {movies.map(movie => (
