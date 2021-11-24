@@ -1,0 +1,33 @@
+.category_container{
+    color: white;
+    padding: 10px;
+    background: linear-gradient(-60deg, rgb(44, 41, 41), #e50914);
+}
+
+.category_notification {
+    text-align: center;
+    font-size: 28px;
+}
+
+.category_text {
+    text-align: justify;
+    margin: 29px 120px;
+    padding: 15px 30px;
+    height: 380px;
+    background-color: #333;
+    border-radius: 8px;
+    opacity: 0.9;
+}
+
+.section_btn {
+    text-decoration: none;
+    background-color: #E50914;
+    padding: 10px;
+    border-radius: 6px;
+    margin-right: 30px;
+    color: white;
+}
+
+#buttons{
+    margin-left: 34%;
+}

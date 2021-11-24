@@ -8,6 +8,7 @@ import Register from "./components/Register/Register";
 import Banner from './components/Banner/Banner';
 import AuthContextProvider from './contexts/authContext';
 import AddMovie from './components/AddMovie/AddMovie';
+import CategorySection from './components/CategorySection/CategorySection';
 
 function App() {
 
@@ -18,13 +19,14 @@ function App() {
       <div className="App">
         <Routes>
           <Route path='/' element={<Banner />} />
-          <Route path='/all' element={<AllMovies />} />
+          <Route path='/all' element={<CategorySection />} />
+          <Route path='/all-neflix-movies' element={<AllMovies />} />
           <Route path="/login" element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='/add-movie' element={<AddMovie />} />
         </Routes>
       </div>
-     
+
       <Footer />
     </AuthContextProvider>
   );

@@ -41,7 +41,7 @@ function Navbar() {
 
     return (
         <header>
-            <Link className="title" to="/">METFLIX</Link>
+            <Link className="title" to="/">MOVIE ADDICT</Link>
 
             <nav className="navbar">
                 {currentUser ? userNavigation : guestNavigation}
