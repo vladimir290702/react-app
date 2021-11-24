@@ -1,12 +1,15 @@
 .add_movie_wrapper {
-    color: white;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(-60deg, rgb(44, 41, 41), #e50914);
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 
 .add_movie_form {
     display: flex;
-    background: #221F1F;
+    background: rgba(0, 0, 0, 0.65);
     border-radius: 15px;
-    margin: 20px 200px;
+    margin: 10px 200px;
     padding: 55px 130px;
 }
 
@@ -18,8 +21,8 @@
 .form_title {
     text-align: center;
     font-size: 45px;
-    margin-top: 30px;
-    margin-bottom: -90px;
+    margin-top: 3px;
+    margin-bottom: -95px;
 }
 
 .left_movie_section {
@@ -43,11 +46,11 @@
     border-radius: 8px;
 }
 
-.form-control::-webkit-input-placeholder{
+.form-control::-webkit-input-placeholder {
     font-size: 16px;
 }
 
-.form-control_special::-webkit-input-placeholder{
+.form-control_special::-webkit-input-placeholder {
     font-size: 16px;
     text-align: center;
 }

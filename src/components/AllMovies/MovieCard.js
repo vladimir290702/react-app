@@ -10,6 +10,7 @@ function MovieCard({ title, endpoint, isLarge }) {
             let response = await fetch(endpoint);
             let data = await response.json();
             setMovies(data.results);
+            console.log(data);
             return data;
         }
         fetchData();
