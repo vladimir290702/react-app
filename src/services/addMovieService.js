@@ -9,9 +9,9 @@ const addMovie = async (movieData) => {
         body: JSON.stringify(movieData)
     })
 
-    console.log(response);
+    let data = await response.json();
 
-    return response;
+    return data;
 }
 
 export default addMovie;

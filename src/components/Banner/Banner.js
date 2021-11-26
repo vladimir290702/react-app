@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import requests from '../../services/tmdbRequest';
 import './Banner.css';
 import ButtonSection from '../ButtonSection/ButtonSection';
+import ResentMovies from '../ResentMovieCard/ResentMovies';
 
 function Banner() {
     const [movie, setMovie] = useState([]);
@@ -20,7 +21,6 @@ function Banner() {
     }, [])
 
     return (
-
         <>
             <div className="banner"
                 style={
@@ -38,7 +38,10 @@ function Banner() {
                     <h1 className='banner_description'>{movie?.overview}</h1>
                 </div>
             </div>
+            <div className="fade_banner"></div>
+
             <ButtonSection />
+            <ResentMovies />
         </>
     )
 }

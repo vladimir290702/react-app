@@ -1,6 +1,6 @@
 .banner {
     color: white;
-    padding-top: 222px;
+    padding-top: 202px;
     max-width: 100%;
     height: 448px;
 }
@@ -25,4 +25,14 @@
     padding-bottom: 200px;
 }
 
+.fade_banner{
+    height: 7.4rem;
+    margin-top: -115px;
+    background-image: linear-gradient(
+        180deg,
+        transparent,
+        rgba(37,37,37,0.61),
+        #111
+    );
+}
 

@@ -1,0 +1,47 @@
+.resent_movies {
+    display: flex;
+    padding: 30px 18%;
+    background: linear-gradient(#575757, #ff0000);
+    margin: 2px 0;
+}
+
+.resent_title {
+    padding: 10px;
+    background: #575757;
+    text-align: center;
+    color: white;
+    margin-bottom: -22px;
+    font-size: 26px;
+}
+
+.resent_movie {
+    display: flex;
+}
+
+.resent_movie img {
+    width: 300px;
+    height: 400px;
+    padding-right: 40px;
+}
+
+.resent_details {
+    width: 300px;
+    text-align: center;
+    padding: 10px 0;
+    height: 40px;
+    margin-top: -10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 0 0 10px 10px;
+    border-color: black;
+    background-color: #221F1F;
+}
+
+.resent_details_btn {
+    text-decoration: none;
+    background-color: #E50914;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+}

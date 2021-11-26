@@ -29,9 +29,10 @@ function AddMovie() {
             creator: email, name, rating, genre, runtime, overview, imageUrl, budget
         }
 
-        addMovie(movieData);
-
-        navigate('/');
+        addMovie(movieData)
+            .then(result => {
+                navigate('/');
+            });
     }
 
     return (
