@@ -11,6 +11,7 @@ import AddMovie from './components/AddMovie/AddMovie';
 import CategorySection from './components/CategorySection/CategorySection';
 import MovieDetails from './components/MovieDetails/MovieDetails';
 import EditMovie from './components/EditMovie/EditMovie';
+import AllMovieAddictMovies from './components/AllMovieAddictMovies/AllMovieAddictMovies';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Banner />} />
           <Route path='/all' element={<CategorySection />} />
+          <Route path='/all-movie-addict-movies' element={<AllMovieAddictMovies />} />
           <Route path='/all-neflix-movies' element={<AllMovies />} />
           <Route path="/login" element={<Login />} />
           <Route path='/register' element={<Register />} />

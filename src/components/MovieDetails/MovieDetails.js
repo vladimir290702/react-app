@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import getMovieDetails from '../../services/getMovieDetails';
 import { useAuth } from '../../contexts/authContext';
 import deleteMovie from '../../services/deleteMovieService';
+import addMovieToFavourites from '../../services/addMovieToFavouritesService';
 
 export default function MovieDetails() {
     const { movieId } = useParams();
@@ -28,9 +29,18 @@ export default function MovieDetails() {
         e.preventDefault();
 
         deleteMovie(movieId)
-        .then(res => {
-            navigate('/');
-        })
+            .then(res => {
+                navigate('/');
+            })
+    }
+
+    const onAddMovieToFavourites = (e) => {
+        e.preventDefault();
+
+        addMovieToFavourites(movieId, currentUser)
+            .then(res => {
+                navigate('/');
+            })
     }
 
     return (
@@ -48,7 +58,7 @@ export default function MovieDetails() {
                         )
                         : (
                             <div className="creator_buttons">
-                                <Link to={`/add-to-favourites/${currentMovie.movieId}`} className="personal_btn_guest">Add to favourites</Link>
+                                <Link to="#" onClick={onAddMovieToFavourites} className="personal_btn_guest">Add to favourites</Link>
                             </div>
                         )
                 }

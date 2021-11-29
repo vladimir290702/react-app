@@ -1,0 +1,23 @@
+#title{
+    text-align: center;
+    font-size: 32px;
+}
+
+.movie-addict-movies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.all-movies-image{
+    width: 286px;
+    height: 380px;
+    transition: 0.4s;
+    padding-left: 8px;
+}
+
+.all-movies-image:hover{
+    transform: scale(1.07);
+}
