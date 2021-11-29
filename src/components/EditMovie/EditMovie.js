@@ -1,9 +1,9 @@
-import './AddMovie.css';
+import './EditMovie.css';
 import { useAuth } from '../../contexts/authContext';
 import addMovie from '../../services/addMovieService';
 import { useNavigate } from 'react-router-dom';
 
-function AddMovie() {
+function EditMovie() {
     const navigate = useNavigate();
     const { currentUser } = useAuth();
     let email;
@@ -12,7 +12,7 @@ function AddMovie() {
         email = currentUser.email;
     }
 
-    const onCreateMovie = (e) => {
+    const onEditMovie = (e) => {
         e.preventDefault();
 
         let formData = new FormData(e.currentTarget);
@@ -37,8 +37,8 @@ function AddMovie() {
     
     return (
         <div className='add_movie_wrapper'>
-            <h1 className='form_title'>Add Movie</h1>
-            <form action="" id="add_movie_form" className="add_movie_form" onSubmit={onCreateMovie}>
+            <h1 className='form_title'>Edit Movie</h1>
+            <form action="" id="add_movie_form" className="add_movie_form" onSubmit={onEditMovie}>
                 <div className="left_movie_section">
                     <div>
                         <h1 >Movie Title</h1>
@@ -114,4 +114,4 @@ function AddMovie() {
     )
 }
 
-export default AddMovie;
+export default EditMovie;
