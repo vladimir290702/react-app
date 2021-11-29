@@ -1,19 +1,21 @@
 import './MovieDetails.css';
-import { useParams } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import getMovieDetails from '../../services/getMovieDetails';
 import { useAuth } from '../../contexts/authContext';
+import deleteMovie from '../../services/deleteMovieService';
 
 export default function MovieDetails() {
     const { movieId } = useParams();
     const [currentMovie, setCurrentMovie] = useState({});
     const { currentUser } = useAuth();
+    const navigate = useNavigate();
+
     let email;
 
     if (currentUser) {
         email = currentUser.email;
     }
-
 
     useEffect(() => {
         getMovieDetails(movieId)
@@ -21,6 +23,15 @@ export default function MovieDetails() {
                 setCurrentMovie(data);
             })
     }, [])
+
+    const onMovieDelete = (e) => {
+        e.preventDefault();
+
+        deleteMovie(movieId)
+        .then(res => {
+            navigate('/');
+        })
+    }
 
     return (
         <div className="details_container">
@@ -31,14 +42,15 @@ export default function MovieDetails() {
                     email === currentMovie.creator
                         ? (
                             <div className="creator_buttons">
-                                <a href={`/edit/${currentMovie.movieId}`} className="personal_btn">Edit</a>
-                                <a href={`/delete/${currentMovie.movieId}`} className="personal_btn">Delete</a>
+                                <Link to={`/edit/${currentMovie.movieId}`} className="personal_btn">Edit</Link>
+                                <Link to='#' onClick={onMovieDelete} className="personal_btn">Delete</Link>
                             </div>
                         )
-                        :
-                        <div className="creator_buttons">
-                            <a href={`/add-to-favourites/${currentMovie.movieId}`} className="personal_btn_guest">Add to favourites</a>
-                        </div>
+                        : (
+                            <div className="creator_buttons">
+                                <Link to={`/add-to-favourites/${currentMovie.movieId}`} className="personal_btn_guest">Add to favourites</Link>
+                            </div>
+                        )
                 }
             </section>
 

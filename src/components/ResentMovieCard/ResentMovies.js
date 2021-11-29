@@ -8,7 +8,6 @@ export default function ResentMovies() {
     useEffect(() => {
         getResentMovies()
             .then(data => {
-                console.log(data);
                 setResentMovies(data);
             })
 
