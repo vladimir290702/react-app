@@ -1,16 +1,27 @@
 import './EditMovie.css';
 import { useAuth } from '../../contexts/authContext';
-import addMovie from '../../services/addMovieService';
-import { useNavigate } from 'react-router-dom';
+import editMovie from '../../services/editMovieService';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import getMovieDetails from '../../services/getMovieDetails';
 
 function EditMovie() {
+    const { movieId } = useParams();
     const navigate = useNavigate();
     const { currentUser } = useAuth();
+    const [movieInformation, setmovieInformation] = useState({})
     let email;
 
     if (currentUser) {
         email = currentUser.email;
     }
+
+    useEffect(() => {
+        getMovieDetails(movieId)
+            .then(data => {
+                setmovieInformation(data);
+            })
+    }, [])
 
     const onEditMovie = (e) => {
         e.preventDefault();
@@ -29,12 +40,12 @@ function EditMovie() {
             creator: email, name, rating, genre, runtime, overview, imageUrl, budget
         }
 
-        addMovie(movieData)
-            .then(result => {
-                navigate('/');
-            });
+        editMovie(movieId, movieData)
+        .then(res => {
+            navigate(`/details/${movieId}`)
+        })
     }
-    
+
     return (
         <div className='add_movie_wrapper'>
             <h1 className='form_title'>Edit Movie</h1>
@@ -47,6 +58,7 @@ function EditMovie() {
                             className="form-control"
                             placeholder="Title..."
                             name="title"
+                            defaultValue={movieInformation.name}
                         />
                     </div>
                     <div>
@@ -56,6 +68,7 @@ function EditMovie() {
                             className="form-control"
                             placeholder="Rating..."
                             name="rating"
+                            defaultValue={movieInformation.rating}
                         />
                     </div>
                     <div>
@@ -65,6 +78,7 @@ function EditMovie() {
                             className="form-control"
                             placeholder="Genre..."
                             name="genre"
+                            defaultValue={movieInformation.genre}
                         />
                     </div>
                     <div>
@@ -74,6 +88,7 @@ function EditMovie() {
                             className="form-control"
                             placeholder="Runtime..."
                             name="runtime"
+                            defaultValue={movieInformation.runtime}
                         />
                     </div>
                 </div>
@@ -86,6 +101,7 @@ function EditMovie() {
                             className="form-control_special"
                             placeholder="Overview..."
                             name="overview"
+                            defaultValue={movieInformation.overview}
                         />
                     </div>
                     <div>
@@ -95,6 +111,7 @@ function EditMovie() {
                             className="form-control"
                             placeholder="ImageUrl..."
                             name="imageUrl"
+                            defaultValue={movieInformation.imageUrl}
                         />
                     </div>
                     <div>
@@ -104,6 +121,7 @@ function EditMovie() {
                             className="form-control"
                             placeholder="Budget..."
                             name="budget"
+                            defaultValue={movieInformation.budget}
                         />
                     </div>
                 </div>

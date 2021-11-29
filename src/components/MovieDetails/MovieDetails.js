@@ -21,7 +21,7 @@ export default function MovieDetails() {
                 setCurrentMovie(data);
             })
     }, [])
-console.log(currentMovie);
+
     return (
         <div className="details_container">
             <section className="details_section">

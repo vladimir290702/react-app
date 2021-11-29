@@ -10,6 +10,7 @@ import AuthContextProvider from './contexts/authContext';
 import AddMovie from './components/AddMovie/AddMovie';
 import CategorySection from './components/CategorySection/CategorySection';
 import MovieDetails from './components/MovieDetails/MovieDetails';
+import EditMovie from './components/EditMovie/EditMovie';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           <Route path='/register' element={<Register />} />
           <Route path='/add-movie' element={<AddMovie />} />
           <Route path='/details/:movieId' element={<MovieDetails />} />
+          <Route path='/edit/:movieId' element={<EditMovie />} />
         </Routes>
       </div>
 
