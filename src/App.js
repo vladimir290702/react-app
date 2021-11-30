@@ -12,6 +12,7 @@ import CategorySection from './components/CategorySection/CategorySection';
 import MovieDetails from './components/MovieDetails/MovieDetails';
 import EditMovie from './components/EditMovie/EditMovie';
 import AllMovieAddictMovies from './components/AllMovieAddictMovies/AllMovieAddictMovies';
+import NetflixMovieDetails from './components/NetflixMovieDetails/NetflixDetails';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
           <Route path='/add-movie' element={<AddMovie />} />
           <Route path='/details/:movieId' element={<MovieDetails />} />
           <Route path='/edit/:movieId' element={<EditMovie />} />
+          <Route path='/details/netflix/:id/' element={<NetflixMovieDetails />} />
         </Routes>
       </div>
 

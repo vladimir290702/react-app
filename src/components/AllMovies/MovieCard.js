@@ -1,4 +1,5 @@
 import './MovieCard.css';
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
 const base_url = "https://image.tmdb.org/t/p/original";
 
@@ -15,18 +16,20 @@ function MovieCard({ title, endpoint, isLarge }) {
         }
         fetchData();
     }, [])
-
+    
     return (
         <div className="row">
             <h1 className='movie_title'>{title}</h1>
 
             <div className="row_posters">
                 {movies.map(movie => (
-                    <img 
-                    key={movie.id}
-                    className={`row_poster ${isLarge && 'row_posterLarge'}`}
-                    src={`${base_url}${isLarge ? movie.poster_path : movie.backdrop_path}`} 
-                    alt={movie.name} />
+                    <Link to={`/details/netflix/${movie.id}`} key={movie.id}>
+                        <img
+                            className={`row_poster`}
+                            src={`${base_url}${movie.poster_path}`}
+                            alt={movie.title}
+                        />
+                    </Link>
                 ))}
             </div>
         </div>

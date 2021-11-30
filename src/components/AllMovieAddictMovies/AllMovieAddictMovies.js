@@ -14,7 +14,7 @@ function AllMovieAddictMovies() {
     }, []);
 
     return (
-        <>
+        <div id="all_movies">
             <h1 id="title">All Movies</h1>
 
             <div className="movie-addict-movies">
@@ -32,7 +32,7 @@ function AllMovieAddictMovies() {
                         : <h1>Sorry we don't have any added movies yet!</h1>
                 }
             </div>
-        </>
+        </div>
     )
 }
 
