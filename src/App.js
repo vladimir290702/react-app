@@ -13,6 +13,7 @@ import MovieDetails from './components/MovieDetails/MovieDetails';
 import EditMovie from './components/EditMovie/EditMovie';
 import AllMovieAddictMovies from './components/AllMovieAddictMovies/AllMovieAddictMovies';
 import NetflixMovieDetails from './components/NetflixMovieDetails/NetflixDetails';
+import Profile from './components/Profile/Profile';
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
           <Route path='/details/:movieId' element={<MovieDetails />} />
           <Route path='/edit/:movieId' element={<EditMovie />} />
           <Route path='/details/netflix/:id/' element={<NetflixMovieDetails />} />
+          <Route path='/profile' element={<Profile />} />
         </Routes>
       </div>
 

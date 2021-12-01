@@ -23,7 +23,7 @@ export default function ResentMovies() {
                     resentMovies.length > 0
                         ? resentMovies.map(movie =>
                         (
-                            <div className="resent_movie">
+                            <div className="resent_movie" key={movie.id}>
                                 <ResentMovieCard key={movie.id} resentMovies={movie} />
                             </div>
                         ))

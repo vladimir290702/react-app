@@ -1,0 +1,42 @@
+.profile_wrapper {
+    padding: 1px 5%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.profile_wrapper h1{
+    margin-bottom: 40px;
+}
+
+.created_by_user {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.favourite_movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.all-movies-image {
+    width: 156px;
+    height: 215px;
+    transition: 0.4s;
+    padding-left: 8px;
+}
+
+.all-movies-image:hover {
+    transform: scale(1.07);
+}
+
+.emp{
+    height: 2px;
+    background-color: red;
+}
