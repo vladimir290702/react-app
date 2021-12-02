@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 function ButtonSection() {
+
     const notify = () => {
         toast.warn(`Please make sure that you provided the whole 
         data about every movie you want to add. Thank you in advance!`, {
@@ -10,15 +11,19 @@ function ButtonSection() {
             autoClose: 10000,
         });
     }
+
     return (
         <div className="section_container">
             <div id="wrap">
-                <Link to="/add-movie" onClick={notify} className="add_movie">Add Movie</Link>
-                <Link to="/all" className="search_movie">Show All Movies</Link>
+                <div>
+                    <Link to="/add-movie" onClick={notify} className="wrap_btn">Add Movie</Link>
 
-                <form className='search_form'>
-                    <input id="search" name="search" type="text" placeholder="Search..." />
-                </form>
+                </div>
+
+                <div>
+                    <Link to="/all" className="wrap_btn">Show All Movies</Link>
+
+                </div>
             </div>
         </div>
     )

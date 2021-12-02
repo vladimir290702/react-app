@@ -26,7 +26,6 @@ export default function Profile() {
             });
     }, [])
 
-    console.log(favouriteMovies);
     return (
         <>
             <div className='profile_wrapper'>
