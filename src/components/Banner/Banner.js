@@ -3,9 +3,14 @@ import requests from '../../services/tmdbRequest';
 import './Banner.css';
 import ButtonSection from '../ButtonSection/ButtonSection';
 import ResentMovies from '../ResentMovieCard/ResentMovies';
+import { toast } from 'react-toastify';
 
 function Banner() {
     const [movie, setMovie] = useState([]);
+
+    const notify = () => {
+        toast('Hello');
+    }
 
     useEffect(() => {
         async function fetchData() {

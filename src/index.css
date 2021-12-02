@@ -4,3 +4,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.notification{
+  margin-top: 70px;
+}
+

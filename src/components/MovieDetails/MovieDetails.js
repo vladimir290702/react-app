@@ -5,6 +5,7 @@ import getMovieDetails from '../../services/getMovieDetails';
 import { useAuth } from '../../contexts/authContext';
 import deleteMovie from '../../services/deleteMovieService';
 import addMovieToFavourites from '../../services/addMovieToFavouritesService';
+import { toast } from 'react-toastify';
 
 export default function MovieDetails() {
     const { movieId } = useParams();
@@ -30,6 +31,9 @@ export default function MovieDetails() {
 
         deleteMovie(movieId)
             .then(res => {
+                toast.success('Successfully deleted movie', {
+                    className: 'notification',
+                });
                 navigate('/');
             })
     }
@@ -39,6 +43,9 @@ export default function MovieDetails() {
 
         addMovieToFavourites(movieId, currentUser)
             .then(res => {
+                toast.success('Successfully added to your favourite movies', {
+                    className: 'notification',
+                });
                 navigate('/');
             })
     }

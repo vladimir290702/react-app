@@ -4,6 +4,7 @@ import editMovie from '../../services/editMovieService';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import getMovieDetails from '../../services/getMovieDetails';
+import { toast } from 'react-toastify';
 
 function EditMovie() {
     const { movieId } = useParams();
@@ -40,10 +41,21 @@ function EditMovie() {
             creator: email, name, rating, genre, runtime, overview, imageUrl, budget
         }
 
+        if (name === '' || rating === "" || genre === "" || runtime === ""
+            || overview === "" || imageUrl === "" || budget === "") {
+            toast.error('Please fill all inputs with correct data', {
+                className: 'notification',
+            });
+            return navigate('/edit-movie');
+        }
+
         editMovie(movieId, movieData)
-        .then(res => {
-            navigate(`/details/${movieId}`)
-        })
+            .then(res => {
+                toast.success('You successfully edited your movie', {
+                    className: 'notification',
+                });
+                navigate(`/details/${movieId}`)
+            })
     }
 
     return (

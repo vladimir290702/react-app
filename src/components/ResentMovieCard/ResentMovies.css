@@ -46,7 +46,38 @@
     font-size: 20px;
 }
 
-.resent_movies h2{
+.resent_movies h2 {
     margin: auto;
     font-size: 40px;
+}
+
+@media (max-width: 480px) {
+    .resent_movies {
+        display: inline-block;
+        padding: 0px 15%;
+    }
+
+    .resent_title {
+        margin-bottom: -32px;
+        font-size: 10px;
+    }
+
+    .resent_movie img {
+        width: 200px;
+        height: 300px;
+    }
+
+    .resent_details {
+        width: 200px;
+        padding: 10px 0;
+        height: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+    }
+
+    .resent_details_btn {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
 }

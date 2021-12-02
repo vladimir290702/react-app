@@ -2,6 +2,7 @@ import './AddMovie.css';
 import { useAuth } from '../../contexts/authContext';
 import addMovie from '../../services/addMovieService';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 function AddMovie() {
     const navigate = useNavigate();
@@ -25,16 +26,27 @@ function AddMovie() {
         let imageUrl = formData.get('imageUrl');
         let budget = formData.get('budget');
 
+        if (name === '' || rating === "" || genre === "" || runtime === ""
+            || overview === "" || imageUrl === "" || budget === "") {
+            toast.error('Please fill all inputs with correct data', {
+                className: 'notification',
+            });
+            return navigate('/add-movie');
+        }
+
         let movieData = {
             creator: email, name, rating, genre, runtime, overview, imageUrl, budget
         }
 
         addMovie(movieData)
             .then(result => {
+                toast.success('Successfully created a new movie', {
+                    className: 'notification',
+                });
                 navigate('/');
             });
     }
-    
+
     return (
         <div className='add_movie_wrapper'>
             <h1 className='form_title'>Add Movie</h1>

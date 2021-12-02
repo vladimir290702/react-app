@@ -7,7 +7,7 @@
     text-decoration: none;
     border-radius: 50%;
     color: white;
-  }
+}
 
 .fa:hover {
     opacity: 0.7;
@@ -34,7 +34,7 @@
     color: white;
 }
 
-.copy{
+.copy {
     font-size: 20px;
 }
 
@@ -44,11 +44,24 @@
     padding-left: 5px;
 }
 
-.site-footer{
+.site-footer {
     background-color: #221F1F;
     height: 150px;
 }
 
-.social-media{
+.social-media {
     padding-top: 20px;
+}
+
+@media (max-width: 480px) {
+    .fa {
+        padding: 15px;
+        margin: 0 10px;
+        font-size: 30px;
+        width: 30px;
+    }
+
+    .site-footer {
+        padding-bottom: 30px;
+    }
 }

@@ -2,6 +2,7 @@ import './Register.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/authContext';
+import { toast } from 'react-toastify';
 
 function Register() {
     const navigate = useNavigate();
@@ -20,8 +21,18 @@ function Register() {
         }
 
         register(email, password)
-            .then(res => navigate('/'))
-            .catch(err => console.log(err.message))
+            .then(res => {
+                toast.success('Successfully created an account', {
+                    className: 'notification',
+                });
+                navigate('/')
+            })
+            .catch(err => {
+                toast.error(err.message, {
+                    className: 'notification',
+                });
+                navigate('/register');
+            })
     }
 
     return (

@@ -2,13 +2,15 @@ import './Login.css';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/authContext';
 import { useState } from 'react';
+import {toast} from 'react-toastify';
+
 function Login() {
     const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const { login } = useAuth()
+    const { login } = useAuth();
 
     const onLoginHandler = (e) => {
         e.preventDefault();
@@ -19,9 +21,17 @@ function Login() {
 
         login(email, password)
             .then(res => {
+                toast.success('Successfully logged in', {
+                    className: 'notification',
+                });
                 navigate('/');
             })
-            .catch(err => console.log(err.message))
+            .catch(err => {
+                toast.error('Wrong email or password',{
+                    className: 'notification',
+                });
+                navigate('/login');
+            })
     }
     
     return (

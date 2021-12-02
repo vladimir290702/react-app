@@ -13,7 +13,7 @@ function Navbar() {
     }
 
     const guestNavigation = (
-        <ul>
+        <ul className="nav-menu">
             <li className="nav-item">
                 <Link className="nav-link" to="/login">Login</Link>
             </li>
@@ -24,7 +24,7 @@ function Navbar() {
     )
 
     const userNavigation = (
-        <ul>
+        <ul className="nav-menu">
             <li className="nav-item">
                 <Link className="nav-link" to="/profile">Welcome, {email}</Link>
             </li>
@@ -40,14 +40,47 @@ function Navbar() {
     )
 
     return (
-        <header>
-            <Link className="title" to="/">MOVIE ADDICT</Link>
+        <div className="app-navbar">
+            <header className='header'>
+                <Link className="title" to="/">MOVIE ADDICT</Link>
 
-            <nav className="navbar">
-                {currentUser ? userNavigation : guestNavigation}
-            </nav>
-        </header>
+                <nav className="navbar">
+
+                    {currentUser ? userNavigation : guestNavigation}
+                </nav>
+            </header>
+        </div>
+
     );
 }
 
 export default Navbar;
+
+/*
+
+<header class="header">
+        <nav class="navbar">
+            <a href="#" class="nav-logo">WebDev.</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+</header>
+
+*/

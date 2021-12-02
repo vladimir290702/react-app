@@ -1,4 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -15,12 +17,13 @@ import AllMovieAddictMovies from './components/AllMovieAddictMovies/AllMovieAddi
 import NetflixMovieDetails from './components/NetflixMovieDetails/NetflixDetails';
 import Profile from './components/Profile/Profile';
 
-function App() {
+toast.configure();
 
+function App() {
   return (
     <AuthContextProvider>
       <Navbar />
-
+      <ToastContainer autoClose={3500}/>
       <div className="App">
         <Routes>
           <Route path='/' element={<Banner />} />

@@ -29,3 +29,21 @@
 .all-movies-image:hover {
     transform: scale(1.07);
 }
+
+@media (max-width: 480px) {
+    .all-added-movies img {
+        width: 156px;
+        height: 250px;
+        transition: 0.4s;
+        padding-left: 8px;
+    }
+}
+
+@media (max-width: 960px) {
+    .all-added-movies img {
+        width: 256px;
+        height: 350px;
+        transition: 0.4s;
+        padding-left: 8px;
+    }
+}
