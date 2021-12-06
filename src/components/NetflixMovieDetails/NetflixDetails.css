@@ -1,11 +1,13 @@
 .details_container {
     margin: 1px 0;
+    padding-top: 50px;
+    height: 82vh;
     display: flex;
     background-color: #E50914;
 }
 
 .details_image {
-    width: 310px;
+    width: 330px;
 }
 
 .details_section {
@@ -31,7 +33,7 @@
     color: white;
 }
 
-.personal_btn_guest{
+.personal_btn_guest {
     background-color: #E50914;
     padding: 5px 30px;
     font-size: 20px;
@@ -47,7 +49,11 @@
 }
 
 .movie_information h2 {
-    font-size: 22px;
+    font-size: 25px;
+}
+
+.movie_information:nth-child(2) {
+    width: 50%;
 }
 
 .movie_information span {

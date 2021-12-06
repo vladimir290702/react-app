@@ -50,6 +50,8 @@ function AllMovieAddictMovies() {
                         : <h1>Sorry we don't have any added movies yet!</h1>
                 }
             </div>
+
+            <div className="delimeter"></div>
         </div>
     )
 }

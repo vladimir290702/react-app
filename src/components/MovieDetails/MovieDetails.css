@@ -1,7 +1,7 @@
 .details_container {
     margin: 1px 0;
     display: flex;
-    background-color: #E50914;
+    background: linear-gradient( #575757, #ff0000);
 }
 
 .details_image {

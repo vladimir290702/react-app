@@ -3,15 +3,17 @@ import requests from '../../services/tmdbRequest';
 import './Banner.css';
 import ButtonSection from '../ButtonSection/ButtonSection';
 import ResentMovies from '../ResentMovieCard/ResentMovies';
-import { toast } from 'react-toastify';
+import { useAuth } from '../../contexts/authContext';
 
 function Banner() {
     const [movie, setMovie] = useState([]);
+    const { currentUser } = useAuth();
 
-    const notify = () => {
-        toast('Hello');
+    let email;
+
+    if (currentUser) {
+        email = currentUser.email;
     }
-
     useEffect(() => {
         async function fetchData() {
             const request = await fetch(requests.fetchTrending);
@@ -45,7 +47,11 @@ function Banner() {
             </div>
             <div className="fade_banner"></div>
 
-            <ButtonSection />
+            {
+                email
+                    ? <ButtonSection />
+                    : <div></div>
+            }
             <ResentMovies />
         </>
     )

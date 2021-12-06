@@ -46,7 +46,7 @@ function Login() {
                         name="email"
                         type="text"
                         required="{true}" />
-                    <label className="login-label">Email</label>
+                    <label className="login-label"  htmlFor='email'>Email</label>
                 </div>
                 <div className="login-group">
                     <input

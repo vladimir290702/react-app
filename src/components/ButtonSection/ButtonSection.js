@@ -25,6 +25,8 @@ function ButtonSection() {
 
                 </div>
             </div>
+
+            <div className="delimeter"></div>
         </div>
     )
 }

@@ -10,6 +10,7 @@ import { toast } from 'react-toastify';
 export default function MovieDetails() {
     const { movieId } = useParams();
     const [currentMovie, setCurrentMovie] = useState({});
+    const [ifAdded, setifAdded] = useState(false)
     const { currentUser } = useAuth();
     const navigate = useNavigate();
 
@@ -22,6 +23,13 @@ export default function MovieDetails() {
     useEffect(() => {
         getMovieDetails(movieId)
             .then(data => {
+                if ((data.favouriteTo)) {
+                    let favArray = Object.values(data.favouriteTo);
+
+                    if (favArray.includes(email)) {
+                        setifAdded(true);
+                    }
+                }
                 setCurrentMovie(data);
             })
     }, [])
@@ -50,24 +58,38 @@ export default function MovieDetails() {
             })
     }
 
+    const CreatorButtons = (
+        <div className="creator_buttons">
+            <Link to={`/edit/${currentMovie.movieId}`} className="personal_btn">Edit</Link>
+            <Link to='#' onClick={onMovieDelete} className="personal_btn">Delete</Link>
+        </div>
+    )
+
     return (
-        <div className="details_container">
+        <div className="details_container" key={currentMovie.id}>
             <section className="details_section">
                 <img src={currentMovie.imageUrl} alt={currentMovie.name} className="details_image" />
 
                 {
-                    email === currentMovie.creator
-                        ? (
-                            <div className="creator_buttons">
-                                <Link to={`/edit/${currentMovie.movieId}`} className="personal_btn">Edit</Link>
-                                <Link to='#' onClick={onMovieDelete} className="personal_btn">Delete</Link>
-                            </div>
-                        )
-                        : (
-                            <div className="creator_buttons">
-                                <Link to="#" onClick={onAddMovieToFavourites} className="personal_btn_guest">Add to favourites</Link>
-                            </div>
-                        )
+                    email
+                        ? [(
+                            email === currentMovie.creator
+                                ? <CreatorButtons />
+                                : [(
+                                    ifAdded
+                                        ? (
+                                            <div className="creator_buttons">
+                                                <Link to='#' disabled={true} className="personal_btn_guest">Added to favourites</Link>
+                                            </div>
+                                        )
+                                        : (
+                                            <div className="creator_buttons">
+                                                <Link to="#" onClick={onAddMovieToFavourites} className="personal_btn_guest">Add to favourites</Link>
+                                            </div>
+                                        )
+                                )]
+                        )]
+                        : <div></div>
                 }
             </section>
 

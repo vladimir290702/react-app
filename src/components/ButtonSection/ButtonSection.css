@@ -1,21 +1,25 @@
+.section_container{
+    background-color: #221F1F;
+}
+
 #wrap {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    height: 70px;
+    height: 40px;
 }
 
 #wrap div {
-    margin: auto;
+    margin: 25px auto;
     text-decoration: none;
 }
+
 
 .wrap_btn {
     background-color: red;
     padding: 10px 20px;
     text-decoration: none;
     color: white;
+    font-size: 24px;
     border-radius: 5px;
 }
 
