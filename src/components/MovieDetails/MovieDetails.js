@@ -23,6 +23,8 @@ export default function MovieDetails() {
     useEffect(() => {
         getMovieDetails(movieId)
             .then(data => {
+                setCurrentMovie(data);
+
                 if ((data.favouriteTo)) {
                     let favArray = Object.values(data.favouriteTo);
 
@@ -30,7 +32,6 @@ export default function MovieDetails() {
                         setifAdded(true);
                     }
                 }
-                setCurrentMovie(data);
             })
     }, [])
 
@@ -58,13 +59,6 @@ export default function MovieDetails() {
             })
     }
 
-    const CreatorButtons = (
-        <div className="creator_buttons">
-            <Link to={`/edit/${currentMovie.movieId}`} className="personal_btn">Edit</Link>
-            <Link to='#' onClick={onMovieDelete} className="personal_btn">Delete</Link>
-        </div>
-    )
-
     return (
         <div className="details_container" key={currentMovie.id}>
             <section className="details_section">
@@ -74,7 +68,12 @@ export default function MovieDetails() {
                     email
                         ? [(
                             email === currentMovie.creator
-                                ? <CreatorButtons />
+                                ? (
+                                    <div className="creator_buttons">
+                                        <Link to={`/edit/${currentMovie.movieId}`} className="personal_btn">Edit</Link>
+                                        <Link to='#' onClick={onMovieDelete} className="personal_btn">Delete</Link>
+                                    </div>
+                                )
                                 : [(
                                     ifAdded
                                         ? (

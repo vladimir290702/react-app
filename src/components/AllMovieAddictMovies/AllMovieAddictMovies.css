@@ -1,18 +1,20 @@
 #all_movies {
     background-color: #221F1F;
-    margin-top: -22px;
+    margin-top: -24px;
     padding-bottom: 10px;
 }
 
 #title {
     text-align: center;
-    font-size: 34px;
+    padding-top: 30px;
+    font-size: 37px;
     color: white;
 }
 
 .search_div{
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 #search {
@@ -50,6 +52,10 @@
     align-items: center;
 }
 
+.movie-addict-movies h1{
+    color: white;
+}
+
 .all-added-movies img {
     width: 286px;
     height: 380px;
@@ -60,8 +66,6 @@
 .all-movies-image:hover {
     transform: scale(1.07);
 }
-
-
 
 @media (max-width: 480px) {
     .all-added-movies img {
