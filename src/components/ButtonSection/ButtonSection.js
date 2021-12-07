@@ -6,7 +6,9 @@ function ButtonSection() {
 
     const notify = () => {
         toast.warn(`Please make sure that you provided the whole 
-        data about every movie you want to add. Thank you in advance!`, {
+        data about every movie you want to add.Every wrong provided 
+        data will ruin the whole idea of this application! 
+        Thank you in advance!`, {
             className: 'notification',
             autoClose: 10000,
         });

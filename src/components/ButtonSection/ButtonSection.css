@@ -24,3 +24,35 @@
 }
 
 
+@media (min-width: 320px) {
+    #wrap {
+        height: 30px;
+    }
+
+    .wrap_btn {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 480px) {
+    
+
+    .wrap_btn {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 760px) {
+    .wrap_btn {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 980px) {
+    #wrap {
+        height: 40px;
+    }
+    .wrap_btn {
+        font-size: 24px;
+    }
+}

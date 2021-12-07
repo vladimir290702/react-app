@@ -60,7 +60,7 @@ export default function MovieDetails() {
     }
 
     return (
-        <div className="details_container" key={currentMovie.id}>
+        <div className="details_container_ma" key={currentMovie.id}>
             <section className="details_section">
                 <img src={currentMovie.imageUrl} alt={currentMovie.name} className="details_image" />
 

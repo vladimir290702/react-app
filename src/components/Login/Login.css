@@ -83,3 +83,145 @@
 ::placeholder {
     font-size: 0.7rem;
 }
+
+@media (min-width: 320px) {
+    .login-wrapper {
+        height: 64vh;
+    }
+
+    .login {
+        width: 200px;
+        height: 250px;
+        padding: 30px 50px;
+    }
+
+    .login-title {
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+    }
+
+    .login-label {
+        font-size: 0.6rem;
+        top: 20px;
+        left: 12px;
+    }
+
+    .login-input {
+        margin-bottom: 10px;
+        font-size: 0.8rem;
+        line-height: 30px;
+        padding: 15px 18px 0;
+    }
+
+    .login-input:focus+.login-label {
+        top: 20px;
+        font-size: 0.8rem;
+    }
+
+    .login-btn {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 480px) {
+    .login-wrapper {
+        height: 61vh;
+        padding-top: 70px;
+    }
+
+    .login {
+        width: 250px;
+        height: 300px;
+        padding: 30px 50px;
+    }
+
+    .login-title {
+        margin-bottom: 10px;
+        font-size: 1.8rem;
+    }
+
+    .login-label {
+        font-size: 0.8rem;
+    }
+
+    .login-input {
+        margin-bottom: 20px;
+        font-size: 1rem;
+        padding: 18px 20px 0;
+    }
+
+    .login-input:focus+.login-label {
+        top: 20px;
+        font-size: 0.9rem;
+    }
+
+    .login-btn {
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 760px) {
+    .login-wrapper {
+        height: 60vh;
+        padding-top: 70px;
+    }
+
+    .login {
+        width: 300px;
+        height: 300px;
+        padding: 30px 50px;
+    }
+
+    .login-title {
+        margin-bottom: 10px;
+        font-size: 2rem;
+    }
+
+    .login-label {
+        font-size: 0.9rem;
+    }
+
+    .login-input {
+        margin-bottom: 20px;
+        font-size: 1rem;
+        padding: 27px 20px 0;
+    }
+
+    .login-input:focus+.login-label {
+        top: 20px;
+        font-size: 0.9rem;
+    }
+
+    .login-btn {
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 960px) {
+    .login-wrapper {
+        height: 62vh;
+        padding-top: 50px;
+    }
+    .login {
+        width: 350px;
+        height: 320px;
+        padding: 40px 50px;
+    }
+
+    .login-title {
+        margin-bottom: 15px;
+    }
+
+    .login-input:focus+.login-label {
+        top: 10px;
+        font-size: 0.9rem;
+    }
+
+    .login-btn {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+}

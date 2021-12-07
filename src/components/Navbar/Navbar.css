@@ -57,54 +57,13 @@ header {
     transform: scale(1.1);
 }
 
-@media (max-width: 480px) {
+@media (min-width: 320px) {
     .navbar {
         text-align: left;
     }
 
-    .navbar ul li {
+    .nav-menu {
         display: inline-block;
-        padding: 0;
-    }
-
-    .nav-link {
-        float: none;
-        font-size: 20px;
-    }
-
-    .title {
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        text-align: left;
-    }
-
-    .navbar ul li {
-        display: inline-block;
-        padding: 0 10px;
-    }
-
-    .nav-link {
-        float: none;
-        font-size: 22px;
-    }
-
-    .title {
-        font-size: 2rem;
-        padding-top: 25px;
-    }
-}
-
-@media (max-width: 320px) {
-    .nav-title{
-        font-size: 1.7rem;
-    }
-
-    .navbar ul li {
-        padding: 0;
     }
 
     .nav-link {
@@ -112,31 +71,69 @@ header {
     }
 
     .title {
-        padding: 10px;
+        font-size: 1.5rem;
         text-align: center;
-        font-size: 1.2rem;
+        padding-top: 1rem;
+        padding-left: 25%;
+        margin-bottom: -15px;
     }
 }
 
-@media (max-width: 480px) {
-    .nav-title{
-        font-size: 1.9rem;
+@media (min-width: 480px) {
+    .header {
+        height: 120px;
+    }
+
+    .navbar {
         text-align: center;
     }
 
-    .navbar ul li {
-        padding: 0;
+    .nav-link {
+        font-size: 20px;
+        margin-top: -15px;
+    }
+
+    .title {
+        font-size: 1.7rem;
+        text-align: center;
+        padding-top: 1rem;
+        padding-left: 35%;
+    }
+}
+
+@media (min-width: 728px) {
+    .header {
+        height: 70px;
+    }
+ 
+
+    .navbar {
+        float: right;
     }
 
     .nav-link {
+        margin-top: 0px;
+
         font-size: 18px;
     }
 
     .title {
-        padding: 10px;
-        text-align: center;
-        font-size: 1.2rem;
+        font-size: 1.8rem;
+        float: left;
+        padding: 0.8rem 2rem;
     }
 }
 
+@media (min-width: 968px) {
 
+    .nav-link {
+        font-size: 20px;
+    }
+
+    .title {
+        font-size: 2rem;
+        float: left;
+        padding: 0.8rem 0;
+        padding-left: 2rem;
+    }
+}

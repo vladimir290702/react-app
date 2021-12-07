@@ -59,15 +59,15 @@ function EditMovie() {
     }
 
     return (
-        <div className='add_movie_wrapper'>
-            <h1 className='form_title'>Edit Movie</h1>
-            <form action="" id="add_movie_form" className="add_movie_form" onSubmit={onEditMovie}>
-                <div className="left_movie_section">
+        <div className='edit_movie_wrapper'>
+            <h1 className='edit_form_title'>Edit Movie</h1>
+            <form action="" id="edit_movie_form" className="edit_movie_form" onSubmit={onEditMovie}>
+                <div className="edit_left_movie_section">
                     <div>
                         <h1 >Movie Title</h1>
                         <input
                             type="text"
-                            className="form-control"
+                            className="edit_form-control"
                             placeholder="Title..."
                             name="title"
                             defaultValue={movieInformation.name}
@@ -77,7 +77,7 @@ function EditMovie() {
                         <h1>Movie Rating</h1>
                         <input
                             type="text"
-                            className="form-control"
+                            className="edit_form-control"
                             placeholder="Rating..."
                             name="rating"
                             defaultValue={movieInformation.rating}
@@ -87,7 +87,7 @@ function EditMovie() {
                         <h1>Movie Genre</h1>
                         <input
                             type="text"
-                            className="form-control"
+                            className="edit_form-control"
                             placeholder="Genre..."
                             name="genre"
                             defaultValue={movieInformation.genre}
@@ -97,7 +97,7 @@ function EditMovie() {
                         <h1 >Movie Runtime</h1>
                         <input
                             type="text"
-                            className="form-control"
+                            className="edit_form-control"
                             placeholder="Runtime..."
                             name="runtime"
                             defaultValue={movieInformation.runtime}
@@ -105,12 +105,12 @@ function EditMovie() {
                     </div>
                 </div>
 
-                <div className="right_movie_section">
+                <div className="edit_right_movie_section">
                     <div>
                         <h1>Movie Overview</h1>
                         <input
                             type="text"
-                            className="form-control_special"
+                            className="edit_form-control_special"
                             placeholder="Overview..."
                             name="overview"
                             defaultValue={movieInformation.overview}
@@ -120,7 +120,7 @@ function EditMovie() {
                         <h1 >Movie Image</h1>
                         <input
                             type="text"
-                            className="form-control"
+                            className="edit_form-control"
                             placeholder="ImageUrl..."
                             name="imageUrl"
                             defaultValue={movieInformation.imageUrl}
@@ -130,7 +130,7 @@ function EditMovie() {
                         <h1>Movie Budget</h1>
                         <input
                             type="text"
-                            className="form-control"
+                            className="edit_form-control"
                             placeholder="Budget..."
                             name="budget"
                             defaultValue={movieInformation.budget}
@@ -138,7 +138,7 @@ function EditMovie() {
                     </div>
                 </div>
 
-                <button className='btn_submit'>Submit</button>
+                <button className='edit_btn_submit'>Submit</button>
             </form>
         </div>
     )

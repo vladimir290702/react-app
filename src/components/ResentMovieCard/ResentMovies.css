@@ -1,8 +1,7 @@
 .resent_movies {
     display: flex;
-    padding: 30px 18%;
+    flex-wrap: wrap;
     background: linear-gradient(#575757, #ff0000);
-    margin: 2px 0;
 }
 
 .resent_title {
@@ -15,13 +14,12 @@
 }
 
 .resent_movie {
-    display: flex;
+    margin: auto;
 }
 
 .resent_movie img {
     width: 300px;
     height: 400px;
-    padding-right: 40px;
 }
 
 .resent_details {
@@ -51,33 +49,95 @@
     font-size: 40px;
 }
 
-@media (max-width: 480px) {
-    .resent_movies {
-        display: inline-block;
-        padding: 0px 15%;
-    }
-
+@media (min-width: 320px)  {
     .resent_title {
-        margin-bottom: -32px;
-        font-size: 10px;
+        font-size: 14px;
+        padding-bottom: 30px;
     }
 
     .resent_movie img {
+        margin: auto;
         width: 200px;
         height: 300px;
     }
 
     .resent_details {
         width: 200px;
-        padding: 10px 0;
-        height: 20px;
-        padding-top: 15px;
-        padding-bottom: 15px;
+        height: 30px;
         margin-bottom: 20px;
     }
 
     .resent_details_btn {
-        padding: 5px 10px;
-        font-size: 12px;
+        padding: 7px 17px;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 480px) {
+    .resent_title {
+        font-size: 16px;
+    }
+
+    .resent_movie img {
+        margin: auto;
+        width: 220px;
+        height: 320px;
+    }
+
+    .resent_details {
+        width: 220px;
+        height: 32px;
+        margin-bottom: 20px;
+    }
+
+    .resent_details_btn {
+        padding: 8px 18px;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 760px) {
+    .resent_title {
+        font-size: 18px;
+    }
+
+    .resent_movie img {
+        margin: auto;
+        width: 250px;
+        height: 350px;
+    }
+
+    .resent_details {
+        width: 250px;
+        height: 35px;
+        margin-bottom: 20px;
+    }
+
+    .resent_details_btn {
+        padding: 8px 18px;
+        font-size: 22px;
+    }
+}
+
+
+@media (min-width: 980px) {
+    .resent_title {
+        font-size: 20px;
+    }
+
+    .resent_movie img {
+        margin: auto;
+        width: 300px;
+        height: 400px;
+    }
+
+    .resent_details {
+        width: 300px;
+        height: 40px;
+    }
+
+    .resent_details_btn {
+        padding: 8px 18px;
+        font-size: 23px;
     }
 }

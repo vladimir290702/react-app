@@ -1,7 +1,7 @@
-.details_container {
+.details_container_ma {
     margin: 1px 0;
     display: flex;
-    background: linear-gradient( #575757, #ff0000);
+    background: linear-gradient(#575757, #ff0000);
 }
 
 .details_image {
@@ -31,7 +31,7 @@
     color: white;
 }
 
-.personal_btn_guest{
+.personal_btn_guest {
     background-color: #E50914;
     padding: 5px 30px;
     font-size: 20px;
@@ -57,4 +57,78 @@
 .personal_btn:hover, .personal_btn_guest:hover {
     color: #E50914;
     background-color: white;
+}
+
+@media (min-width: 320px) {
+    .details_container_ma {
+        padding-top: 20px;
+        display: inline-block;
+        font-size: 10px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .creator_buttons {
+        margin: auto;
+        padding: 15px 10px;
+        text-align: center;
+        width: 190px;
+    }
+
+    .personal_btn {
+        padding: 5px 15px;
+        font-size: 14px;
+    }
+
+    .personal_btn_guest {
+        font-size: 14px;
+        padding: 5px 20px;
+    }
+}
+
+@media (min-width: 760px) {
+    .details_container_ma {
+        padding-top: 20px;
+        display: inline-block;
+        font-size: 10px;
+    }
+
+    .creator_buttons {
+        margin: auto;
+        padding: 15px 10px;
+        text-align: center;
+        width: 280px;
+    }
+
+    .personal_btn {
+        padding: 5px 20px;
+        font-size: 18px;
+    }
+
+    .personal_btn_guest {
+        font-size: 18px;
+        padding: 5px 20px;
+    }
+}
+
+@media (min-width: 980px) {
+    .details_container_ma {
+        margin: 1px 0;
+        padding-top: 20px;
+        height: 85vh;
+        display: flex;
+        background-color: #E50914;
+    }
+
+    .creator_buttons {
+        margin: auto;
+        padding: 15px 10px;
+        text-align: center;
+        width: 310px;
+    }
+
+    .personal_btn {
+        padding: 5px 25px;
+        font-size: 20px;
+    }
 }

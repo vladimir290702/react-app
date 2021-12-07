@@ -1,4 +1,4 @@
-.add_movie_wrapper {
+.edit_movie_wrapper {
     object-fit: contain;
     color: rgb(255, 255, 255);
     background: linear-gradient(-60deg, rgb(44, 41, 41), #e50914);
@@ -6,7 +6,7 @@
     padding-bottom: 20px;
 }
 
-.add_movie_form {
+.edit_movie_form {
     display: flex;
     background: rgba(0, 0, 0, 0.65);
     border-radius: 15px;
@@ -14,49 +14,49 @@
     padding: 55px 130px;
 }
 
-.add_movie_form h1 {
+.edit_movie_form h1 {
     font-size: 26px;
     margin-bottom: -5px;
 }
 
-.form_title {
+.edit_form_title {
     text-align: center;
     font-size: 45px;
     margin-top: 3px;
     margin-bottom: -95px;
 }
 
-.left_movie_section {
+.edit_left_movie_section {
     float: left;
     padding-right: 50px;
 }
 
-.right_movie_section {
+.edit_right_movie_section {
     float: right;
 }
 
-.form-control {
+.edit_form-control {
     width: 26vw;
     height: 40px;
     border-radius: 8px;
 }
 
-.form-control_special {
+.edit_form-control_special {
     height: 137px;
     width: 26vw;
     border-radius: 8px;
 }
 
-.form-control::-webkit-input-placeholder {
+.edit_form-control::-webkit-input-placeholder {
     font-size: 16px;
 }
 
-.form-control_special::-webkit-input-placeholder {
+.edit_form-control_special::-webkit-input-placeholder {
     font-size: 16px;
     text-align: center;
 }
 
-.btn_submit {
+.edit_btn_submit {
     font-size: 22px;
     color: white;
     background-color: #e50914;
@@ -68,6 +68,209 @@
     transition: 0.4s;
 }
 
-.btn_submit:hover {
+.edit_btn_submit:hover {
     font-size: 26px;
+}
+
+@media(min-width: 320px) {
+    .edit_movie_form {
+        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+        align-content: center;
+    }
+
+    .edit_form_title {
+        font-size: 35px;
+        margin-top: 3px;
+        margin-bottom: -85px;
+    }
+
+    .edit_movie_form h1 {
+        font-size: 18px;
+        margin-bottom: -5px;
+    }
+
+    .edit_left_movie_section {
+        margin-left: 50px;
+    }
+
+    .edit_form-control {
+        width: 200px;
+        height: 35px;
+        margin: auto;
+    }
+
+    .edit_form-control_special {
+        height: 107px;
+        width: 200px;
+    }
+
+    .edit_btn_submit {
+        font-size: 20px;
+        height: 50px;
+        width: 208px;
+        margin-top: 20px;
+        margin-left: 52px;
+    }
+
+    .edit_btn_submit:hover {
+        font-size: 22px;
+    }
+}
+
+@media(min-width: 480px) {
+    .edit_movie_form {
+        margin: 25px;
+    }
+
+    .edit_form_title {
+        font-size: 38px;
+        margin-top: 3px;
+        margin-bottom: -85px;
+    }
+
+    .edit_movie_form h1 {
+        font-size: 20px;
+        margin-bottom: -5px;
+    }
+
+    .edit_form-control {
+        width: 300px;
+        height: 38px;
+    }
+
+    .edit_form-control_special {
+        height: 127px;
+        width: 300px;
+    }
+
+    .edit_btn_submit {
+        font-size: 22px;
+        height: 50px;
+        width: 308px;
+        margin-top: 20px;
+        margin-left: 52px;
+    }
+
+    .edit_btn_submit:hover {
+        font-size: 24px;
+    }
+}
+
+@media(min-width: 725px) {
+    .edit_movie_form {
+        margin: 35px;
+    }
+
+    .edit_form_title {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .edit_movie_form h1 {
+        font-size: 20px;
+        margin-bottom: 1px;
+    }
+
+    .edit_form-control {
+        width: 350px;
+        height: 38px;
+    }
+
+    .edit_form-control_special {
+        height: 147px;
+        width: 350px;
+    }
+
+    .edit_btn_submit {
+        font-size: 22px;
+        height: 70px;
+        width: 358px;
+        margin-top: 20px;
+        margin-left: 52px;
+    }
+
+    .edit_btn_submit:hover {
+        font-size: 24px;
+    }
+}
+
+@media(min-width: 990px) {
+    .edit_movie_form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: left;
+        margin: 10px 15px ;
+    }
+
+    .edit_form_title {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .edit_left_movie_section{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        margin: auto;
+    }
+
+    .edit_right_movie_section{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        margin: auto;
+    }
+    .edit_form-control {
+        width: 320px;
+        height: 38px;
+    }
+
+    .edit_form-control_special {
+        height: 127px;
+        width: 320px;
+    }
+
+    .edit_btn_submit {
+        justify-content: right;
+        font-size: 22px;
+        height: 60px;
+        width: 328px;
+        margin: 32px auto;
+    }
+
+    .edit_btn_submit:hover {
+        font-size: 24px;
+    }
+}
+
+@media(min-width: 1250px) {
+
+    .edit_form-control {
+        width: 450px;
+        height: 38px;
+    }
+
+    .edit_form-control_special {
+        height: 127px;
+        width: 450px;
+    }
+
+    .edit_btn_submit {
+        justify-content: right;
+        font-size: 22px;
+        height: 60px;
+        width: 328px;
+        margin: 32px auto;
+    }
+
+    .edit_btn_submit:hover {
+        font-size: 24px;
+    }
 }

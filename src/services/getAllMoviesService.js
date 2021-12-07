@@ -14,7 +14,7 @@ const getAllMovies = async (query) => {
             if (!query) {
                 return x;
             }
-            else if (x.name.includes(query)) {
+            else if (x.name.toLowerCase().includes(query.toLowerCase())) {
                 return x;
             }
         });

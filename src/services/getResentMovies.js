@@ -10,7 +10,7 @@ const getResentMovies = async () => {
 
     let resentMovies = Object.keys(data).map(id => Object.assign(data[id], { id }))
 
-    return resentMovies.slice(-3).reverse();
+    return resentMovies.slice(-4).reverse();
 }
 
 export default getResentMovies;

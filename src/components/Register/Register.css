@@ -87,3 +87,141 @@
 ::placeholder {
     font-size: 0.7rem;
 }
+
+@media (min-width: 320px) {
+    .register-wrapper {
+        height: 66vh;
+        padding-top: 38px;
+    }
+
+    .register {
+        width: 200px;
+        height: 330px;
+        padding: 30px 50px;
+    }
+
+    .register-title {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .register-label {
+        font-size: 0.6rem;
+        top: 30px;
+        left: 12px;
+    }
+
+    .register-input {
+        margin-bottom: 12px;
+        font-size: 0.8rem;
+        line-height: 40px;
+        padding: 15px 18px 0;
+    }
+
+    .register-input:focus+.register-label {
+        font-size: 0.7rem;
+    }
+
+    .register-btn {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .register-btn:hover {
+        font-size: 1.1rem;
+        padding: 15px
+    }
+}
+
+@media (min-width: 480px) {
+    .register-wrapper {
+        height: 80vh;
+        padding-top: 90px;
+
+    }
+    .register {
+        width: 250px;
+        height: 340px;
+    }
+
+    .register-title {
+        margin-bottom: 10px;
+        font-size: 1.8rem;
+    }
+
+    .register-label {
+        font-size: 0.8rem;
+        top: 20px;
+    }
+
+    .register-input {
+        margin-bottom: 20px;
+        font-size: 1rem;
+        
+        padding: 12px 20px 0;
+    }
+
+    .register-input:focus+.register-label {
+        font-size: 0.9rem;
+        top: 7px;
+    }
+
+    .register-btn {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .register-btn:hover {
+        font-size: 1.1rem;
+        padding: 15px
+    }
+}
+
+@media (min-width: 760px) {
+    .register {
+        width: 300px;
+        height: 360px;
+    }
+
+    .register-title {
+        font-size: 2rem;
+    }
+
+    .register-label {
+        font-size: 0.9rem;
+    }
+
+    .register-btn {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .register-btn:hover {
+        font-size: 1.1rem;
+        padding: 15px
+    }
+}
+
+@media (min-width: 980px) {
+
+    .register {
+        width: 320px;
+        height: 360px;
+    }
+
+    .register-title {
+        font-size: 2rem;
+    }
+
+    .register-label {
+        font-size: 0.9rem;
+    }
+
+    .register-btn {
+        font-size: 1.1rem;
+    }
+
+    
+}
