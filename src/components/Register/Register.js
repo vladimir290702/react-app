@@ -40,7 +40,7 @@ export default function Register() {
 
     return (
         <div className="register-wrapper">
-            <form className="register" onSubmit={onRegisterHandler} >
+            <form className="register" onSubmit={onRegisterHandler} autoComplete='off'>
                 <h1 className="register-title">Sign In</h1>
                 <div className="register-group">
                     <input
@@ -49,8 +49,8 @@ export default function Register() {
                         onChange={(e) => setEmail(e.target.value)}
                         type="email"
                         name='email'
+                        placeholder='Email...'
                         required="{true}" />
-                    <label className="register-label">Email</label>
                 </div>
                 <div className="register-group">
                     <input
@@ -59,8 +59,8 @@ export default function Register() {
                         onChange={(e) => setPassword(e.target.value)}
                         type="password"
                         name='password'
+                        placeholder='Password...'
                         required="{true}" />
-                    <label className="register-label">Password</label>
                 </div>
                 <div className="register-group">
                     <input
@@ -69,8 +69,8 @@ export default function Register() {
                         onChange={(e) => setRepeatPassword(e.target.value)}
                         type="password"
                         name='re-password'
+                        placeholder='Repeat Password...'
                         required="{true}" />
-                    <label className="register-label">Repeat Password</label>
                 </div>
                 <button className="register-btn" type="submit" >Sign Up</button>
             </form>

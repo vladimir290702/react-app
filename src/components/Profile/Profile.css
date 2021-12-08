@@ -1,6 +1,6 @@
 .profile_wrapper {
     padding: 1px 5%;
-    background-color: #333;
+    background: linear-gradient( #221F1F, #333);
     color: white;
     text-align: center;
 }
@@ -54,20 +54,20 @@
     }
 
     .profile_wrapper h1{
-        font-size: 20px;
+        margin-top: 30px;
+        font-size: 22px;
     }
 
     .all-movies-image {
-        width: 130px;
-        height: 175px;
+        width: 160px;
+        height: 220px;
     }
 }
 
 @media (min-width: 480px) {
-
     .all-movies-image {
-        width: 130px;
-        height: 175px;
+        width: 200px;
+        height: 265px;
     }
 
     .profile_wrapper h1{

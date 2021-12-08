@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     height: 568px;
-    padding-top: 90px;
+    padding-top: 80px;
 }
 
 .login {
@@ -71,21 +71,13 @@
     transition: 0.4s;
 }
 
-::-moz-placeholder {
-    font-size: 0.7rem;
-}
-
-:-ms-input-placeholder {
-    font-size: 0.7rem;
-}
-
 ::placeholder {
     font-size: 0.7rem;
 }
 
 @media (min-width: 320px) {
     .login-wrapper {
-        height: 64vh;
+        height: 55vh;
     }
 
     .login {
@@ -99,22 +91,11 @@
         font-size: 1.5rem;
     }
 
-    .login-label {
-        font-size: 0.6rem;
-        top: 20px;
-        left: 12px;
-    }
-
     .login-input {
         margin-bottom: 10px;
         font-size: 0.8rem;
         line-height: 30px;
-        padding: 15px 18px 0;
-    }
-
-    .login-input:focus+.login-label {
-        top: 20px;
-        font-size: 0.8rem;
+        padding: 10px 18px;
     }
 
     .login-btn {
@@ -140,30 +121,22 @@
         font-size: 1.8rem;
     }
 
-    .login-label {
-        font-size: 0.8rem;
-    }
-
     .login-input {
-        margin-bottom: 20px;
+        margin-bottom: 12px;
         font-size: 1rem;
-        padding: 18px 20px 0;
-    }
-
-    .login-input:focus+.login-label {
-        top: 20px;
-        font-size: 0.9rem;
+        padding: 10px 20px;
     }
 
     .login-btn {
         padding: 15px;
         font-size: 1rem;
     }
+
 }
 
 @media (min-width: 760px) {
     .login-wrapper {
-        height: 60vh;
+        height: 62vh;
         padding-top: 70px;
     }
 
@@ -178,19 +151,10 @@
         font-size: 2rem;
     }
 
-    .login-label {
-        font-size: 0.9rem;
-    }
-
     .login-input {
         margin-bottom: 20px;
         font-size: 1rem;
-        padding: 27px 20px 0;
-    }
-
-    .login-input:focus+.login-label {
-        top: 20px;
-        font-size: 0.9rem;
+        padding: 12px 20px;
     }
 
     .login-btn {
@@ -212,11 +176,6 @@
 
     .login-title {
         margin-bottom: 15px;
-    }
-
-    .login-input:focus+.login-label {
-        top: 10px;
-        font-size: 0.9rem;
     }
 
     .login-btn {

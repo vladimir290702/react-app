@@ -39,7 +39,7 @@ export default function Login() {
 
     return (
         <div className="login-wrapper">
-            <form className="login" method="POST" onSubmit={onLoginHandler}>
+            <form className="login" method="POST" onSubmit={onLoginHandler} autoComplete='off'>
                 <h1 className="login-title">Sign In</h1>
                 <div className="login-group">
                     <input
@@ -48,8 +48,8 @@ export default function Login() {
                         onChange={(e) => setEmail(e.target.value)}
                         name="email"
                         type="text"
+                        placeholder="Email..."
                         required="{true}" />
-                    <label className="login-label" htmlFor='email'>Email</label>
                 </div>
                 <div className="login-group">
                     <input
@@ -58,8 +58,8 @@ export default function Login() {
                         onChange={(e) => setPassword(e.target.value)}
                         name="password"
                         type="password"
+                        placeholder='Password...'
                         required="{true}" />
-                    <label className="login-label">Password</label>
                 </div>
                 <button className="login-btn" type="submit">Sign In</button>
             </form>
