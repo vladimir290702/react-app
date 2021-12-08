@@ -19,7 +19,6 @@ export default function NetflixMovieDetails() {
                 movieTrailer(data.title)
                     .then(url => {
                         const urlParams = new URLSearchParams(new URL(url).search);
-console.log(urlParams, new URL(url));
                         setTrailerUrl(urlParams.get('v'))
                     })
                     .catch(e => console.log(e))

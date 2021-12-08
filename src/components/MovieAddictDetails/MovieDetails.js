@@ -5,6 +5,7 @@ import getMovieDetails from '../../services/getMovieDetails';
 import { useAuth } from '../../contexts/authContext';
 import deleteMovie from '../../services/deleteMovieService';
 import addMovieToFavourites from '../../services/addMovieToFavouritesService';
+import removeMovieFromFavourites from '../../services/removeMovieFromFavourites';
 import { toast } from 'react-toastify';
 import YouTube from 'react-youtube';
 import movieTrailer from 'movie-trailer'
@@ -27,12 +28,14 @@ export default function MovieDetails() {
         getMovieDetails(movieId)
             .then(data => {
                 setCurrentMovie(data);
-                console.log(data.name);
+
                 movieTrailer(data.name)
                     .then(url => {
                         const urlParams = new URLSearchParams(new URL(url).search);
-                        console.log(urlParams.get('v'));
                         setTrailerUrl(urlParams.get('v'))
+                    })
+                    .catch(e => {
+                        setTrailerUrl(undefined);
                     })
 
                 if ((data.favouriteTo)) {
@@ -69,6 +72,19 @@ export default function MovieDetails() {
             })
     }
 
+    const onRemoveFromFavourites = (e) => {
+        e.preventDefault();
+
+        removeMovieFromFavourites(movieId, currentUser)
+            .then(res => {
+                console.log(res);
+                toast.success('Successfully removed movie from favourites!', {
+                    className: 'notification',
+                })
+                navigate(`/`);
+            })
+    }
+
     return (
         <>
             <div className="details_container_ma">
@@ -88,7 +104,7 @@ export default function MovieDetails() {
                                         ifAdded
                                             ? (
                                                 <div className="creator_buttons">
-                                                    <Link to='#' disabled={true} className="personal_btn_guest">Added to favourites</Link>
+                                                    <Link to='#' onClick={onRemoveFromFavourites} className="personal_btn_guest">Remove from favourites</Link>
                                                 </div>
                                             )
                                             : (

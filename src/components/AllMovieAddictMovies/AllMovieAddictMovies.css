@@ -67,6 +67,12 @@
     transform: scale(1.07);
 }
 
+.no-movie{
+    padding-top: 40px;
+    font-size: 35px;
+    height: 28vh;
+}
+
 @media (max-width: 480px) {
     .all-added-movies img {
         width: 156px;
@@ -83,4 +89,6 @@
         transition: 0.4s;
         padding-left: 8px;
     }
+
+    
 }
