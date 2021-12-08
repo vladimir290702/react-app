@@ -18,7 +18,6 @@ export default function ResentMovies() {
                 <h1>Resently Added Movies</h1>
             </div>
             <div className="resent_movies">
-
                 {
                     resentMovies.length > 0
                         ? resentMovies.map(movie =>

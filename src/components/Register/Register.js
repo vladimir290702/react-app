@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/authContext';
 import { toast } from 'react-toastify';
 
-function Register() {
+export default function Register() {
     const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
@@ -17,6 +17,9 @@ function Register() {
         e.preventDefault();
 
         if (password !== repeatPassword) {
+            toast.error(`Passwords don't match`, {
+                className: 'notification',
+            });
             return navigate('/register');
         }
 
@@ -74,5 +77,3 @@ function Register() {
         </div>
     );
 }
-
-export default Register;

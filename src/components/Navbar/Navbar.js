@@ -1,8 +1,9 @@
 import './Navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/authContext';
+import { toast } from 'react-toastify';
 
-function Navbar() {
+export default function Navbar() {
     const navigate = useNavigate();
 
     const { currentUser, logout } = useAuth();
@@ -32,7 +33,9 @@ function Navbar() {
                 <Link className="nav-link" to="/logout" onClick={async e => {
                     e.preventDefault();
                     navigate('/')
-
+                    toast.success('You successfully logged out!', {
+                        className: 'notification',
+                    });
                     logout();
                 }}>Logout</Link>
             </li>
@@ -50,8 +53,6 @@ function Navbar() {
                 </nav>
             </header>
         </div>
-
     );
 }
 
-export default Navbar;

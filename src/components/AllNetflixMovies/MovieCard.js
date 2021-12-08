@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
 const base_url = "https://image.tmdb.org/t/p/original";
 
-function MovieCard({ title, endpoint }) {
+export default function MovieCard({ title, endpoint }) {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
@@ -34,5 +34,3 @@ function MovieCard({ title, endpoint }) {
         </div>
     )
 }
-
-export default MovieCard;

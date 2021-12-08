@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import './ResentMovies.css'
 
 export default function ResentMovieCard({ resentMovies }) {
-
     return (
         <div>
             <img src={resentMovies.imageUrl} alt={resentMovies.name} />

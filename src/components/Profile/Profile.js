@@ -24,7 +24,7 @@ export default function Profile() {
             .then(data => {
                 setFavouriteMovies(data);
             });
-    }, [])
+    }, [email])
 
     return (
         <>
@@ -35,7 +35,7 @@ export default function Profile() {
                         createdMovies.length > 0
                             ? createdMovies.map(movie => (
                                 <span key={movie.id} className='all_movies'>
-                                    <Link to={`/details/${movie.id}`}>
+                                    <Link to={`/details/${movie.id}`} className="invisible">
                                         <img src={movie.imageUrl} alt={movie.name} className='all-movies-image' />
                                     </Link>
                                 </span>
@@ -50,7 +50,7 @@ export default function Profile() {
                         favouriteMovies.length > 0
                             ? favouriteMovies.map(movie => (
                                 <span key={movie.id} className='all_movies'>
-                                    <Link to={`/details/${movie.id}`}>
+                                    <Link to={`/details/${movie.id}`} className="invisible">
                                         <img src={movie.imageUrl} alt={movie.name} className='all-movies-image' />
                                     </Link>
                                 </span>
@@ -58,7 +58,6 @@ export default function Profile() {
                             : <h1>Sorry you don't have any favourite movies yet!</h1>
                     }
                 </div>
-
             </div>
 
             <div className="emp"></div>

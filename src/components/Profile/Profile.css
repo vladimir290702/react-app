@@ -24,6 +24,9 @@
     align-items: center;
     margin-bottom: 30px;
 }
+.invisible{
+    background-color: #333;
+}
 
 .all-movies-image {
     width: 156px;
@@ -89,6 +92,9 @@
 }
 
 @media (min-width: 960px) {
+    .profile_wrapper{
+        height: 90vh;
+    }
     .profile_wrapper h1{
         font-size: 24px;
     }

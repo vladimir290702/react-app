@@ -2,7 +2,7 @@ import './ButtonSection.css';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-function ButtonSection() {
+export default function ButtonSection() {
 
     const notify = () => {
         toast.warn(`Please make sure that you provided the whole 
@@ -19,18 +19,12 @@ function ButtonSection() {
             <div id="wrap">
                 <div>
                     <Link to="/add-movie" onClick={notify} className="wrap_btn">Add Movie</Link>
-
                 </div>
-
                 <div>
                     <Link to="/all" className="wrap_btn">Show All Movies</Link>
-
                 </div>
             </div>
-
             <div className="delimeter"></div>
         </div>
     )
 }
-
-export default ButtonSection;

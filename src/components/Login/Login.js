@@ -2,9 +2,9 @@ import './Login.css';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/authContext';
 import { useState } from 'react';
-import {toast} from 'react-toastify';
+import { toast } from 'react-toastify';
 
-function Login() {
+export default function Login() {
     const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
@@ -16,6 +16,9 @@ function Login() {
         e.preventDefault();
 
         if (!email || !password) {
+            toast.error('Please fill all inputs', {
+                className: 'notification',
+            })
             return navigate('/login');
         }
 
@@ -27,13 +30,13 @@ function Login() {
                 navigate('/');
             })
             .catch(err => {
-                toast.error('Wrong email or password',{
+                toast.error('Wrong email or password', {
                     className: 'notification',
                 });
                 navigate('/login');
             })
     }
-    
+
     return (
         <div className="login-wrapper">
             <form className="login" method="POST" onSubmit={onLoginHandler}>
@@ -46,7 +49,7 @@ function Login() {
                         name="email"
                         type="text"
                         required="{true}" />
-                    <label className="login-label"  htmlFor='email'>Email</label>
+                    <label className="login-label" htmlFor='email'>Email</label>
                 </div>
                 <div className="login-group">
                     <input
@@ -63,5 +66,3 @@ function Login() {
         </div>
     );
 }
-
-export default Login;

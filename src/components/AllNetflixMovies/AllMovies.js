@@ -1,7 +1,7 @@
 import MovieCard from './MovieCard';
 import requests from '../../services/tmdbRequest';
 
-function AllMovies() {
+export default function AllMovies() {
     return (
         <div className="all_movies">
             <MovieCard title='Trending Now' endpoint={requests.fetchTrending} />
@@ -9,9 +9,7 @@ function AllMovies() {
             <MovieCard title='Latest' endpoint={requests.fetchLatest} />
             <MovieCard title='Top Rated' endpoint={requests.fetchTopRated} />
             <MovieCard title='Popular' endpoint={requests.fetchPopular} />
-            <h1 className="delimeter"></h1>
+            <div className="delimeter"></div>
         </div>
     )
 }
-
-export default AllMovies;

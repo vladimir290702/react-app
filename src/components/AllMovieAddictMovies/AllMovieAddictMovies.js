@@ -3,7 +3,7 @@ import './AllMovieAddictMovies.css'
 import { useState, useEffect } from 'react';
 import getAllMovies from '../../services/getAllMoviesService';
 
-function AllMovieAddictMovies() {
+export default function AllMovieAddictMovies() {
     const [allMovies, setAllMovies] = useState([]);
     const navigate = useNavigate();
 
@@ -41,7 +41,7 @@ function AllMovieAddictMovies() {
                 {
                     allMovies.length > 0
                         ? allMovies.map(x => (
-                            <span key={x.id} className='all-added-movies'>
+                            <span key={x.id} key={x.id} className='all-added-movies'>
                                 <Link to={`/details/${x.id}`}>
                                     <img src={x.imageUrl} alt={x.name} className='all-movies-image' />
                                 </Link>
@@ -50,10 +50,7 @@ function AllMovieAddictMovies() {
                         : <h1>Sorry we don't have any added movies yet!</h1>
                 }
             </div>
-
             <div className="delimeter"></div>
         </div>
     )
 }
-
-export default AllMovieAddictMovies;

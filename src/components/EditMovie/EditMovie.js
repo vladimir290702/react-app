@@ -6,11 +6,11 @@ import { useState, useEffect } from 'react';
 import getMovieDetails from '../../services/getMovieDetails';
 import { toast } from 'react-toastify';
 
-function EditMovie() {
+export default function EditMovie() {
     const { movieId } = useParams();
     const navigate = useNavigate();
     const { currentUser } = useAuth();
-    const [movieInformation, setmovieInformation] = useState({})
+    const [movieInformation, setMovieInformation] = useState({})
     let email;
 
     if (currentUser) {
@@ -20,9 +20,9 @@ function EditMovie() {
     useEffect(() => {
         getMovieDetails(movieId)
             .then(data => {
-                setmovieInformation(data);
+                setMovieInformation(data);
             })
-    }, [])
+    }, [movieId])
 
     const onEditMovie = (e) => {
         e.preventDefault();
@@ -143,5 +143,3 @@ function EditMovie() {
         </div>
     )
 }
-
-export default EditMovie;

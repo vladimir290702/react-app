@@ -12,7 +12,6 @@ export default function CategorySection() {
                     series with top quality and we have presented you the information in an easy way. The second 
                     way to access any movie information is via the second button down below, where you can look 
                     at movies that are created by our users. Enjoy the information we have grant you!</p>
-
                 <h2>Here you can:</h2>
 
                 <ol>

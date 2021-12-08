@@ -2,7 +2,7 @@
     background-image: url(https://bit.ly/2E3scwW);
     background-repeat: no-repeat;
     background-position: center center;
-    height: 548px;
+    height: 568px;
     padding-top: 90px;
 }
 
@@ -70,7 +70,6 @@
     cursor: pointer;
     transition: 0.4s;
 }
-
 
 ::-moz-placeholder {
     font-size: 0.7rem;
@@ -202,7 +201,7 @@
 
 @media (min-width: 960px) {
     .login-wrapper {
-        height: 62vh;
+        height: 64vh;
         padding-top: 50px;
     }
     .login {

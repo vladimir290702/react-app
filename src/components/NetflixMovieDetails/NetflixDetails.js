@@ -19,20 +19,18 @@ export default function NetflixMovieDetails() {
                 movieTrailer(data.title)
                     .then(url => {
                         const urlParams = new URLSearchParams(new URL(url).search);
-
+console.log(urlParams, new URL(url));
                         setTrailerUrl(urlParams.get('v'))
                     })
                     .catch(e => console.log(e))
             })
     }, [])
 
-
     return (
         <>
             <div className="details_container">
                 <div className="details_section">
                     <img src={`${base_url}${currentMovie.poster_path}`} alt={currentMovie.original_title} className="details_image" />
-
                 </div>
 
                 <div className="movie_information">
@@ -43,19 +41,16 @@ export default function NetflixMovieDetails() {
                     <h2>Runtime:  <span>{currentMovie.runtime} min.</span></h2>
                     <h2>Budget:  <span>${currentMovie.budget}</span></h2>
                 </div>
-
             </div>
 
-            <div id="video_section">
-                {trailerUrl 
-                ? <YouTube videoId={trailerUrl} id='video' />
-            : <h1>Sorry, this movie doesn't have any provided trailer!</h1>
-            }
-
+            <div className="video_section">
+                {trailerUrl
+                    ? <YouTube videoId={trailerUrl} className='video' />
+                    : <h1>Sorry, this movie doesn't have any provided trailer!</h1>
+                }
             </div>
 
             <div className="delimeter"></div>
         </>
-
     )
 }

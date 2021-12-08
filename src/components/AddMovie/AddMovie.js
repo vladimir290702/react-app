@@ -4,7 +4,7 @@ import addMovie from '../../services/addMovieService';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-function AddMovie() {
+export default function AddMovie() {
     const navigate = useNavigate();
     const { currentUser } = useAuth();
     let email;
@@ -124,5 +124,3 @@ function AddMovie() {
         </div>
     )
 }
-
-export default AddMovie;

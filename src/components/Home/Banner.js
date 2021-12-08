@@ -5,7 +5,7 @@ import ButtonSection from '../ButtonSection/ButtonSection';
 import ResentMovies from '../ResentMovieCard/ResentMovies';
 import { useAuth } from '../../contexts/authContext';
 
-function Banner() {
+export default function Banner() {
     const [movie, setMovie] = useState([]);
     const { currentUser } = useAuth();
 
@@ -16,10 +16,10 @@ function Banner() {
     }
     useEffect(() => {
         async function fetchData() {
-            const request = await fetch(requests.fetchTrending);
+            const request = await fetch(requests.fetchPopular);
             const data = await request.json();
 
-            let randomMovie = Math.floor(Math.random() * data.results.length - 1);
+            let randomMovie = Math.floor(Math.random() * data.results.length);
             setMovie(data.results[randomMovie]);
 
             return data;
@@ -56,5 +56,3 @@ function Banner() {
         </>
     )
 }
-
-export default Banner;

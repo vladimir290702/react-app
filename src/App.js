@@ -4,14 +4,14 @@ import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import AllMovies from "./components/AllMovies/AllMovies";
+import AllMovies from "./components/AllNetflixMovies/AllMovies";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
-import Banner from './components/Banner/Banner';
+import Banner from './components/Home/Banner';
 import AuthContextProvider from './contexts/authContext';
 import AddMovie from './components/AddMovie/AddMovie';
 import CategorySection from './components/CategorySection/CategorySection';
-import MovieDetails from './components/MovieDetails/MovieDetails';
+import MovieDetails from './components/MovieAddictDetails/MovieDetails';
 import EditMovie from './components/EditMovie/EditMovie';
 import AllMovieAddictMovies from './components/AllMovieAddictMovies/AllMovieAddictMovies';
 import NetflixMovieDetails from './components/NetflixMovieDetails/NetflixDetails';
@@ -23,7 +23,7 @@ function App() {
   return (
     <AuthContextProvider>
       <Navbar />
-      <ToastContainer autoClose={3500}/>
+      <ToastContainer autoClose={3500} />
       <div className="App">
         <Routes>
           <Route path='/' element={<Banner />} />
@@ -39,7 +39,6 @@ function App() {
           <Route path='/profile' element={<Profile />} />
         </Routes>
       </div>
-
       <Footer />
     </AuthContextProvider>
   );
