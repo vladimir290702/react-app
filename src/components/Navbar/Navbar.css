@@ -80,7 +80,7 @@ header {
 
 @media (min-width: 500px) {
     .header {
-        height: 115px;
+        height: 70px;
     }
 
     .navbar {
@@ -88,7 +88,7 @@ header {
     }
 
     .nav-menu {
-        padding-top: 1rem;
+        padding-top: 1.7rem;
     }
 
     .nav-link {
@@ -113,6 +113,10 @@ header {
         padding: 0.8rem 1rem;
     }
 
+    .nav-menu{
+        padding-top: 1.2rem;
+    }
+
     .nav-link {
         margin-top: -45px;
         font-size: 20px;
@@ -128,8 +132,14 @@ header {
 @media (min-width: 968px) {
 
     .nav-link {
+    margin-top: -10px;
         font-size: 22px;
     }
+
+    .nav-menu{
+        margin: -1px 0;
+    }
+
 
     .title {
         font-size: 2rem;

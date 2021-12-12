@@ -10,6 +10,7 @@ export default function MovieCard({ title, endpoint }) {
         async function fetchData() {
             let response = await fetch(endpoint);
             let data = await response.json();
+            
             setMovies(data.results);
             return data;
         }

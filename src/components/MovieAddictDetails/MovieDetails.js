@@ -13,8 +13,8 @@ import movieTrailer from 'movie-trailer'
 export default function MovieDetails() {
     const { movieId } = useParams();
     const [currentMovie, setCurrentMovie] = useState({});
-    const [trailerUrl, setTrailerUrl] = useState("")
-    const [ifAdded, setIfAdded] = useState(false)
+    const [trailerUrl, setTrailerUrl] = useState("");
+    const [ifAdded, setIfAdded] = useState(false);
     const { currentUser } = useAuth();
     const navigate = useNavigate();
 

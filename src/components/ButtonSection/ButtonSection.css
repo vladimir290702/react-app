@@ -26,11 +26,11 @@
 
 @media (min-width: 320px) {
     #wrap {
-        height: 50px;
+        height: 40px;
     }
 
     #wrap div{
-        margin: 35px auto;
+        margin: 30px auto;
     }
 
     .wrap_btn {
@@ -54,7 +54,7 @@
 
 @media (min-width: 980px) {
     #wrap {
-        height: 40px;
+        height: 45px;
     }
     .wrap_btn {
         font-size: 24px;

@@ -99,7 +99,7 @@
 
 @media (min-width: 480px) {
     .details_container_ma{
-        margin-top: -20px;
+        margin-top: -25px;
     }
 }
 
@@ -136,12 +136,12 @@
 
 @media (min-width: 980px) {
     .details_container_ma {
-        margin: 1px 0;
         padding-top: 20px;
         height: 85vh;
         display: flex;
         background-color: #E50914;
     }
+
 
     .creator_buttons {
         margin: auto;

@@ -4,20 +4,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.notification {
-  margin-top: 70px;
-}
-
 @media(min-width: 320px) {
   .notification {
-    margin-top: 135px;
+    margin-top: 110px;
     font-size: 11px;
   }
 }
 
 @media(min-width: 480px) {
   .notification {
-    margin-top: 105px;
+    margin-top: 55px;
     font-size: 14px;
   }
 }

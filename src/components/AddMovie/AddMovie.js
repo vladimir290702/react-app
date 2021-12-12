@@ -3,8 +3,9 @@ import { useAuth } from '../../contexts/authContext';
 import addMovie from '../../services/addMovieService';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { Navigate } from 'react-router-dom';
 
-export default function AddMovie() {
+function AddMovie() {
     const navigate = useNavigate();
     const { currentUser } = useAuth();
     let email;
@@ -124,3 +125,5 @@ export default function AddMovie() {
         </div>
     )
 }
+
+export default AddMovie;

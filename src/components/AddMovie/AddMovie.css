@@ -1,9 +1,10 @@
 .add_movie_wrapper {
     object-fit: contain;
     color: rgb(255, 255, 255);
-    background: linear-gradient(-60deg, rgb(44, 41, 41), #e50914);
+    background: linear-gradient(180deg, rgb(44, 41, 41), #e50914);
     padding-top: 40px;
     padding-bottom: 20px;
+    padding-top: -20px;
 }
 
 .add_movie_form {
@@ -11,7 +12,7 @@
     background: rgba(0, 0, 0, 0.65);
     border-radius: 15px;
     margin: 10px 200px;
-    padding: 55px 130px;
+    padding: 65px 130px;
 }
 
 .add_movie_form h1 {
@@ -73,6 +74,9 @@
 }
 
 @media(min-width: 320px) {
+    .add_movie_wrapper{
+        margin-top: -18px;
+    }
     .add_movie_form {
         margin: 15px;
         display: flex;
@@ -122,6 +126,9 @@
 }
 
 @media(min-width: 480px) {
+    .add_movie_wrapper{
+        margin-top: 0px;
+    }
     .add_movie_form {
         margin: 25px;
     }
@@ -129,7 +136,7 @@
     .add_form_title {
         font-size: 38px;
         margin-top: 3px;
-        margin-bottom: -85px;
+        margin-bottom: -95px;
     }
 
     .add_movie_form h1 {
@@ -161,6 +168,9 @@
 }
 
 @media(min-width: 725px) {
+    .add_movie_wrapper{
+        margin-top: 0px;
+    }
     .add_movie_form {
         margin: 35px;
     }
@@ -168,6 +178,7 @@
     .add_form_title {
         font-size: 35px;
         text-align: center;
+        margin-bottom: -100px;
     }
 
     .add_movie_form h1 {
@@ -199,6 +210,9 @@
 }
 
 @media(min-width: 990px) {
+    .add_movie_wrapper{
+        margin-top: 0px;
+    }
     .add_movie_form {
         display: flex;
         flex-direction: row;
@@ -210,6 +224,7 @@
     .add_form_title {
         font-size: 40px;
         text-align: center;
+        margin-bottom: -85px;
     }
 
     .add_left_movie_section{
@@ -251,7 +266,9 @@
 }
 
 @media(min-width: 1250px) {
-
+    .add_movie_wrapper{
+        margin-top: 0px;
+    }
     .add_form-control {
         width: 450px;
         height: 38px;

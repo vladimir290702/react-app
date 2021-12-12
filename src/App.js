@@ -23,7 +23,7 @@ function App() {
   return (
     <AuthContextProvider>
       <Navbar />
-      <ToastContainer autoClose={3500} />
+      <ToastContainer autoClose={3500} limit={1}/>
       <div className="App">
         <Routes>
           <Route path='/' element={<Banner />} />
