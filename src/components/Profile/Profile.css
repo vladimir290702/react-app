@@ -93,7 +93,8 @@
 
 @media (min-width: 960px) {
     .profile_wrapper{
-        height: 90vh;
+        margin-top: 1px;
+        height: 95vh;
     }
     .profile_wrapper h1{
         font-size: 24px;

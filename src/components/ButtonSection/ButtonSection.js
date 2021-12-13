@@ -9,7 +9,7 @@ export default function ButtonSection() {
         data about every movie you want to add.Every wrong provided 
         data will ruin the whole idea of this application! 
         Thank you in advance!`, {
-            className: 'notification',
+            className: 'notification-warn',
             autoClose: 10000,
         });
     }

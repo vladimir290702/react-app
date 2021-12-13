@@ -15,7 +15,7 @@ export default function ResentMovies() {
     return (
         <>
             <div className="resent_title">
-                <h1>Resently Added Movies</h1>
+                <h1>Recently Added Movies</h1>
             </div>
             <div className="resent_movies">
                 {

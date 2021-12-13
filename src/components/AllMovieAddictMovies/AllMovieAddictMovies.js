@@ -47,9 +47,7 @@ export default function AllMovieAddictMovies() {
                                 </Link>
                             </span>
                         ))
-                        : (
-                            <div className='no-movie'><h1>Sorry, no movie found!</h1></div>
-                        )
+                        : <div className='no-movie'><h1>Sorry, no movie found!</h1></div>
                 }
             </div>
             <div className="delimeter"></div>

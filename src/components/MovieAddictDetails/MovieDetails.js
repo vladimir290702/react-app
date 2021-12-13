@@ -29,6 +29,7 @@ export default function MovieDetails() {
             .then(data => {
                 setCurrentMovie(data);
 
+                // find youtube url for the movie
                 movieTrailer(data.name)
                     .then(url => {
                         const urlParams = new URLSearchParams(new URL(url).search);
@@ -37,7 +38,8 @@ export default function MovieDetails() {
                     .catch(e => {
                         setTrailerUrl(undefined);
                     })
-
+                    
+                // check if current user has added this movie to his favourites
                 if ((data.favouriteTo)) {
                     let favArray = Object.values(data.favouriteTo);
 
@@ -126,7 +128,6 @@ export default function MovieDetails() {
                     <h2>Runtime:  <span>{currentMovie.runtime}</span></h2>
                     <h2>Budget:  <span>${currentMovie.budget}</span></h2>
                 </div>
-
 
             </div>
             <div className="video_section">

@@ -15,6 +15,8 @@ export default function Banner() {
         email = currentUser.email;
     }
     useEffect(() => {
+
+        // function for taking random movie
         async function fetchData() {
             const request = await fetch(requests.fetchPopular);
             const data = await request.json();

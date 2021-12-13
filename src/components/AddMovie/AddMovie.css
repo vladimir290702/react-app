@@ -75,7 +75,7 @@
 
 @media(min-width: 320px) {
     .add_movie_wrapper{
-        margin-top: -18px;
+        margin-top: -8px;
     }
     .add_movie_form {
         margin: 15px;
@@ -126,15 +126,12 @@
 }
 
 @media(min-width: 480px) {
-    .add_movie_wrapper{
-        margin-top: 0px;
-    }
     .add_movie_form {
         margin: 25px;
     }
 
     .add_form_title {
-        font-size: 38px;
+        font-size: 36px;
         margin-top: 3px;
         margin-bottom: -95px;
     }

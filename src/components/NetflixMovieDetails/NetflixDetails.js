@@ -16,6 +16,7 @@ export default function NetflixMovieDetails() {
             .then(data => {
                 setCurrentMovie(data);
 
+                // get youtube trailer
                 movieTrailer(data.title)
                     .then(url => {
                         const urlParams = new URLSearchParams(new URL(url).search);

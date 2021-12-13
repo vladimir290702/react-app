@@ -3,9 +3,8 @@ import { useAuth } from '../../contexts/authContext';
 import addMovie from '../../services/addMovieService';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { Navigate } from 'react-router-dom';
 
-function AddMovie() {
+export default function AddMovie() {
     const navigate = useNavigate();
     const { currentUser } = useAuth();
     let email;
@@ -45,7 +44,13 @@ function AddMovie() {
                     className: 'notification',
                 });
                 navigate('/');
-            });
+            })
+            .catch(e => {
+                toast.error('Something went wrong, please try again later', {
+                    className: 'notification',
+                });
+                navigate('/');
+            })
     }
 
     return (
@@ -104,7 +109,7 @@ function AddMovie() {
                     <div>
                         <h1 >Movie Image</h1>
                         <input
-                            type="text"
+                            type="url"
                             className="add_form-control"
                             placeholder="ImageUrl..."
                             name="imageUrl"
@@ -113,7 +118,7 @@ function AddMovie() {
                     <div>
                         <h1>Movie Budget</h1>
                         <input
-                            type="text"
+                            type="number"
                             className="add_form-control"
                             placeholder="Budget..."
                             name="budget"
@@ -125,5 +130,3 @@ function AddMovie() {
         </div>
     )
 }
-
-export default AddMovie;

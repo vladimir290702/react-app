@@ -39,7 +39,6 @@
     cursor: pointer;
 }
 
-
 .searchButton .fa {
     margin: -15px;
     font-size: 14px;
@@ -89,6 +88,4 @@
         transition: 0.4s;
         padding-left: 8px;
     }
-
-    
 }
