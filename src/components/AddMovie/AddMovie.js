@@ -7,11 +7,6 @@ import { toast } from 'react-toastify';
 export default function AddMovie() {
     const navigate = useNavigate();
     const { currentUser } = useAuth();
-    let email;
-
-    if (currentUser) {
-        email = currentUser.email;
-    }
 
     const onCreateMovie = (e) => {
         e.preventDefault();
@@ -35,7 +30,7 @@ export default function AddMovie() {
         }
 
         let movieData = {
-            creator: email, name, rating, genre, runtime, overview, imageUrl, budget
+            creator: currentUser, name, rating, genre, runtime, overview, imageUrl, budget
         }
 
         addMovie(movieData)

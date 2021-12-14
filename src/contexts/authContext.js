@@ -21,7 +21,10 @@ export default function AuthContextProvider({ children }) {
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, user => {
-            setCurrentUser(user);
+            if(user === null) {
+                return setCurrentUser(null);
+            }
+            setCurrentUser(user.email);
         })
 
         return () => {

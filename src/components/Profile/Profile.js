@@ -10,22 +10,18 @@ export default function Profile() {
     const [favouriteMovies, setFavouriteMovies] = useState([]);
 
     const { currentUser } = useAuth();
-    let email;
-
-    if (currentUser) {
-        email = currentUser.email;
-    }
+  
     useEffect(() => {
-        getUserMovies(email)
+        getUserMovies(currentUser)
             .then(data => {
                 setCreatedMovies(data);
             })
 
-        getFavouriteMovies(email)
+        getFavouriteMovies(currentUser)
             .then(data => {
                 setFavouriteMovies(data);
             });
-    }, [email])
+    }, [currentUser])
 
     return (
         <>

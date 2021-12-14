@@ -1,10 +1,6 @@
 const baseUrl = `https://movies-fd812-default-rtdb.europe-west1.firebasedatabase.app`;
 
 const removeMovieFromFavourites = async (id, currentUser) => {
-    let email;
-    if (currentUser) {
-        email = currentUser.email;
-    }
 
     let res = await fetch(`${baseUrl}/movies/${id}/favouriteTo.json`);
     let data = await res.json();
@@ -15,7 +11,7 @@ const removeMovieFromFavourites = async (id, currentUser) => {
             .reduce((res, key) => (res[key] = obj[key], res), {});
 
 
-    let filteredArray = Object.filter(data, user => user !== email);
+    let filteredArray = Object.filter(data, user => user !== currentUser);
 
     let response = await fetch(`${baseUrl}/movies/${id}/favouriteTo.json`, {
         method: 'PUT',

@@ -23,16 +23,16 @@ function App() {
   return (
     <AuthContextProvider>
       <Navbar />
-      <ToastContainer autoClose={3500} limit={1}/>
+      <ToastContainer autoClose={3500} limit={1} />
       <div className="App">
         <Routes>
           <Route path='/' element={<Banner />} />
           <Route path='/all' element={<CategorySection />} />
+          <Route path='/add-movie' element={<AddMovie />} />
           <Route path='/all-movie-addict-movies' element={<AllMovieAddictMovies />} />
           <Route path='/all-neflix-movies' element={<AllMovies />} />
           <Route path="/login" element={<Login />} />
           <Route path='/register' element={<Register />} />
-          <Route path='/add-movie' element={<AddMovie />} />
           <Route path='/details/:movieId' element={<MovieDetails />} />
           <Route path='/edit/:movieId' element={<EditMovie />} />
           <Route path='/details/netflix/:id/' element={<NetflixMovieDetails />} />

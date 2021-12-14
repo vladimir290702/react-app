@@ -11,11 +11,6 @@ export default function EditMovie() {
     const navigate = useNavigate();
     const { currentUser } = useAuth();
     const [movieInformation, setMovieInformation] = useState({})
-    let email;
-
-    if (currentUser) {
-        email = currentUser.email;
-    }
 
     useEffect(() => {
         getMovieDetails(movieId)
@@ -38,7 +33,7 @@ export default function EditMovie() {
         let budget = formData.get('budget');
 
         let movieData = {
-            creator: email, name, rating, genre, runtime, overview, imageUrl, budget
+            creator: currentUser, name, rating, genre, runtime, overview, imageUrl, budget
         }
 
         if (name === '' || rating === "" || genre === "" || runtime === ""

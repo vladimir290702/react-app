@@ -7,11 +7,6 @@ export default function Navbar() {
     const navigate = useNavigate();
 
     const { currentUser, logout } = useAuth();
-    let email
-
-    if (currentUser) {
-        email = currentUser.email;
-    }
 
     const guestNavigation = (
         <ul className="nav-menu">
@@ -27,7 +22,7 @@ export default function Navbar() {
     const userNavigation = (
         <ul className="nav-menu">
             <li className="nav-item">
-                <Link className="nav-link" to="/profile">Welcome, {email}</Link>
+                <Link className="nav-link" to="/profile">Welcome, {currentUser}</Link>
             </li>
             <li className="nav-item">
                 <Link className="nav-link" to="/logout" onClick={async e => {

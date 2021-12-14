@@ -9,11 +9,6 @@ export default function Banner() {
     const [movie, setMovie] = useState([]);
     const { currentUser } = useAuth();
 
-    let email;
-
-    if (currentUser) {
-        email = currentUser.email;
-    }
     useEffect(() => {
 
         // function for taking random movie
@@ -50,7 +45,7 @@ export default function Banner() {
             <div className="fade_banner"></div>
 
             {
-                email
+                currentUser
                     ? <ButtonSection />
                     : <div></div>
             }

@@ -18,12 +18,6 @@ export default function MovieDetails() {
     const { currentUser } = useAuth();
     const navigate = useNavigate();
 
-    let email;
-
-    if (currentUser) {
-        email = currentUser.email;
-    }
-
     useEffect(() => {
         getMovieDetails(movieId)
             .then(data => {
@@ -43,7 +37,7 @@ export default function MovieDetails() {
                 if ((data.favouriteTo)) {
                     let favArray = Object.values(data.favouriteTo);
 
-                    if (favArray.includes(email)) {
+                    if (favArray.includes(currentUser)) {
                         setIfAdded(true);
                     }
                 }
@@ -93,9 +87,9 @@ export default function MovieDetails() {
                 <div className="details_section" >
                     <img src={currentMovie.imageUrl} alt={currentMovie.name} className="details_image" />
                     {
-                        email
+                        currentUser
                             ? [(
-                                email === currentMovie.creator
+                                currentUser === currentMovie.creator
                                     ? (
                                         <div className="creator_buttons">
                                             <Link to={`/edit/${currentMovie.movieId}`} className="personal_btn">Edit</Link>
