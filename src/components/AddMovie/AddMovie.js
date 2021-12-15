@@ -8,6 +8,8 @@ export default function AddMovie() {
     const navigate = useNavigate();
     const { currentUser } = useAuth();
 
+    window.scrollTo(0, 0);
+    
     const onCreateMovie = (e) => {
         e.preventDefault();
 

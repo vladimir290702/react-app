@@ -50,3 +50,56 @@ body {
     width: 150%;
   }
 }
+
+.load {
+  background-color: #333;
+  height: 71vh;
+
+}
+
+.loading {
+  margin: auto;
+  padding-top: 150px;
+}
+
+.loading-div h1 {
+  color: white;
+}
+
+.loading-div {
+  display: block;
+}
+
+@media(min-width: 320px) {
+  .load {
+    background-color: #221F1F;
+    height: 66vh;
+  }
+
+  .loading {
+    margin: auto;
+    padding-top: 100px;
+  }
+
+  .loading-div{
+    margin: auto;
+  }
+
+  .loading-div h1 {
+    color: white;
+    margin-top: 170px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 500px) {
+  .load {
+    height: 72vh;
+  }
+}
+
+@media (min-width: 980px) {
+  .load {
+    height: 71vh;
+  }
+}

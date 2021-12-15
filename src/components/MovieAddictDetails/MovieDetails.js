@@ -23,6 +23,9 @@ export default function MovieDetails() {
             .then(data => {
                 setCurrentMovie(data);
 
+                //scroll to the top of the page
+                window.scrollTo(0, 0);
+                
                 // find youtube url for the movie
                 movieTrailer(data.name)
                     .then(url => {
