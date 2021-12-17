@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Movie Addict
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the project i made for the end of the course i participated (React.js) in Softuni.
 
-## Available Scripts
+This application is hosted in [Heroku](https://id.heroku.com/) and can be accessed with the following link [https://movieaddict.herokuapp.com](https://movieaddict.herokuapp.com)
 
-In the project directory, you can run:
+## What Is Used To Build The Applicaiton:
 
-### `npm start`
+In the project directory, i used:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `React`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+``` bash
+$ npx create-react-app my-app
+```
 
-### `npm test`
+JavaScript library for building user interfaces.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Firebase`
+``` bash
+$ npm install firebase
+```
+Realtime Database
 
-### `npm run build`
+### `TMDB API`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The TMDb API is a resource for any developers that want to integrate movie, TV show and cast data along with posters or movie fan art. themoviedb.org is a free and community edited database.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Visit the official [Website](https://www.themoviedb.org/) and [Documentation](https://developers.themoviedb.org/3)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `react-youtube and movie-trailer`
 
-### `npm run eject`
+``` bash
+$ npm install react-youtube
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+``` bash
+$ npm install --save movie-trailer
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+React-youtube is simple React component acting as a thin layer over the YouTube IFrame Player API and i used "movie-trailer" to get the right youtube video according to movie title. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+``` Javascript
+movieTrailer(data.title)
+        .then(url => {
+            const urlParams = new URLSearchParams(new URL(url).search);
+            setTrailerUrl(urlParams.get('v'))
+})
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### `react-toastify`
 
-## Learn More
+``` bash 
+$ npm install --save react-toastify
+$ yarn add react-toastify
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+this library i used for notifications, because it provides good UI and smooth animations and transitions.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Notification example](https://user-images.githubusercontent.com/35040146/100596753-851b5e00-3322-11eb-9073-1a50e5adcb53.png)
 
-### Code Splitting
+# Architecture
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* public
+* src
 
-### Analyzing the Bundle Size
+   * components
+   -> folder with more subfolders (each named as the component name), which have javascript and css file in it.
+   * contexts
+   -> here i keep the auth context.
+   * services
+   -> this folder keeps different requests to firebase or tmdb api. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+      * App.css
+      * App.js
+      * firebase.js
+      * index.css
+      * index.js
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## `For the whole application i used functional components, different react techniques such as Context API, React Hooks, External API's!`  

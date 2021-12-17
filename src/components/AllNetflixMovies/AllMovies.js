@@ -6,7 +6,7 @@ import ReactLoading from 'react-loading';
 export default function AllMovies() {
     const [done, setDone] = useState(false);
     const [div, setDiv] = useState('load');
-
+    
     useEffect(() => {
         setTimeout(() => {
             setDone(true);
